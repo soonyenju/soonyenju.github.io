@@ -11,12 +11,14 @@
 5. 本地运行测试：hexo s
 6. 生成js等文件：hexo g
 7. 配置_config.yml准备部署
-'''
+
+```
 deploy:
  type: git
  repo: git@github.com:soonyenju/soonyenju.github.io.git
  branch: master
-'''
+```
+
 注意：1. 必须用space，不能用tab，而且空格不能多也不能少！
 8. 安装hexo-deployer-git： npm install hexo-deployer-git --save
 9. 部署：hexo d -g
