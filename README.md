@@ -4,7 +4,7 @@
 2. Github SSH Key
 #### 步骤
 [教程](https://zhuanlan.zhihu.com/p/22098309?utm_source=wechat_session&utm_medium=social&utm_oi=52770035990528)
-1. 创建repo，命名方式必须为：`<username>.github.io`, 如：`soonyenju.github.io`, clone到本地
+1. 创建repo, 命名方式必须为：`<username>.github.io`, 如：`soonyenju.github.io`, clone到本地
 2. `npm install -g hexo-cli`
 3. `cd soonyenju.github.io`
 4. `npm install`
