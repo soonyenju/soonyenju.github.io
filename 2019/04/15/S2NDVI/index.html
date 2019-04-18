@@ -5,15 +5,22 @@
   
 
   
-  <title>SongyanZhu's Blog</title>
+  <title>基于GEE计算Sentinel-2多年NDVI | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="介绍 GEE(Google Earth Engine)是一界面友好、接口丰富的空间大数据在线分析平台。集成了从卫星影像、地理空间数据到数据提取、分析等算法集合，以及成果导出等工具。使用shadowsocks等梯子之后，进入GEE网站后，有三种方式和平台进行交互：   Code Editor: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示：图1 图片来源：https:/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于GEE计算Sentinel-2多年NDVI">
+<meta property="og:url" content="http://yoursite.com/2019/04/15/S2NDVI/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="介绍 GEE(Google Earth Engine)是一界面友好、接口丰富的空间大数据在线分析平台。集成了从卫星影像、地理空间数据到数据提取、分析等算法集合，以及成果导出等工具。使用shadowsocks等梯子之后，进入GEE网站后，有三种方式和平台进行交互：   Code Editor: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示：图1 图片来源：https:/">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/04/15/S2NDVI/6624E852CECF4374A627839273C26DDA">
+<meta property="og:image" content="http://yoursite.com/2019/04/15/S2NDVI/2AD294D166204281BD0C285303AD8AD1">
+<meta property="og:updated_time" content="2019-04-18T01:59:03.519Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="基于GEE计算Sentinel-2多年NDVI">
+<meta name="twitter:description" content="介绍 GEE(Google Earth Engine)是一界面友好、接口丰富的空间大数据在线分析平台。集成了从卫星影像、地理空间数据到数据提取、分析等算法集合，以及成果导出等工具。使用shadowsocks等梯子之后，进入GEE网站后，有三种方式和平台进行交互：   Code Editor: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示：图1 图片来源：https:/">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/15/S2NDVI/6624E852CECF4374A627839273C26DDA">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -34,7 +41,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">秋风画扇惹尘埃</a>
+        <a href="/" id="logo">Hexo</a>
       </h1>
       
     </div>
@@ -45,8 +52,6 @@
           <a class="main-nav-link" href="/">Home</a>
         
           <a class="main-nav-link" href="/archives">Archives</a>
-
-          <a class="main-nav-link" href="https://www.researchgate.net/profile/Songyan_Zhu">RG</a>
         
       </nav>
       <nav id="sub-nav">
@@ -62,9 +67,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-S2NDVI" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-S2NDVI" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/04/15/S2NDVI/" class="article-date">
   <time datetime="2019-04-15T00:54:22.857Z" itemprop="datePublished">2019-04-15</time>
@@ -77,8 +80,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/15/S2NDVI/">基于GEE计算Sentinel-2多年NDVI</a>
+    <h1 class="article-title" itemprop="name">
+      基于GEE计算Sentinel-2多年NDVI
     </h1>
   
 
@@ -129,135 +132,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-second" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/04/10/second/" class="article-date">
-  <time datetime="2019-04-10T01:54:09.301Z" itemprop="datePublished">2019-04-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/10/second/">遥感变化检测算法IR-MAD</a>
-    </h1>
+    <a href="/2019/04/10/second/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">遥感变化检测算法IR-MAD</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://developers.google.com/earth-engine/datasets/catalog/WORLDCLIM_V1_MONTHLY" target="_blank" rel="noopener">1</a><br><a href="https://developers.google.com/earth-engine/datasets/catalog/NASA_NEX-GDDP" target="_blank" rel="noopener">2</a><br><a href="https://developers.google.com/earth-engine/datasets/catalog/UTOKYO_WTLAB_KBDI_v1" target="_blank" rel="noopener">3</a><br><a href="https://developers.google.com/earth-engine/datasets/catalog/CSP_ERGo_1_0_Global_SRTM_CHILI" target="_blank" rel="noopener">4</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/10/second/" data-id="cjuakdckk0000ustgmm567eqo" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-first_one" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/28/first_one/" class="article-date">
-  <time datetime="2019-03-28T04:31:10.736Z" itemprop="datePublished">2019-03-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/28/first_one/">人生思考者</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>责任真是一个奇怪的东西。一方面我们害怕它，而另一方面，正是得益于它，我们赢得了尊重，彼此变得更亲近。</p>
-</blockquote>
-<blockquote>
-<p>许多人经常会被一个疑问所折磨，自己拥有的东西到底有多珍贵？有的人需要失去一切后才会明白这一切对他有多珍贵，最重要的是珍惜我们所拥有的此时此刻。</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/28/first_one/" data-id="cjts9njor0000hktgfvpogkyq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/28/hello-world/" class="article-date">
-  <time datetime="2019-03-28T03:42:40.597Z" itemprop="datePublished">2019-03-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/28/hello-world/" data-id="cjts9njoy0001hktg3ohkiynn" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
@@ -315,7 +202,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 Songyan Zhu<br>
+      &copy; 2019 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
