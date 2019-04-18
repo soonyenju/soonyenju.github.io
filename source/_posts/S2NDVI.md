@@ -6,7 +6,7 @@ title: 基于GEE计算Sentinel-2多年NDVI
 使用shadowsocks等梯子之后，进入GEE[网站](https://earthengine.google.com/)后，有三种方式和平台进行交互：
 
 1. `Code Editor`: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示：
-![图1](S2NDVI/timg.jpg)
+![图1](S2NDVI/1.jpg)
 > 图片来源：https://earthengine.google.com/platform/
 2. `Explorer`: 一个简单的GEE API网络接口，用于公共数据集的可视化，登陆后也可以导入数据。运行简单的分析算法、保存和导出结果。
 此外，还有`client libraries`, 提供了JavaScript和Python的API接口。可以方便地再`Code Editor`中处理和分析数据。
@@ -21,11 +21,11 @@ title: 基于GEE计算Sentinel-2多年NDVI
 确定矢量roi有两种方式，手动勾画研究区或上传矢量文件：
 1. 手动勾画方式，见下图：
 
-![image](6624E852CECF4374A627839273C26DDA)
+![图2](S2NDVI/2.jpg)
 
 2. 上传矢量：
 
-![image](2AD294D166204281BD0C285303AD8AD1)
+![图3](S2NDVI/3.jpg)
 
 
 #### 选择数据源
