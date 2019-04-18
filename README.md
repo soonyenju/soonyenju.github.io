@@ -36,3 +36,7 @@ deploy:
 5. [读取repo失败](https://www.jianshu.com/p/67c57c70f275)
 
 6. [配置ssh key](https://blog.csdn.net/baidu_30809315/article/details/76687063)
+
+7. [在post中添加图片](https://blog.csdn.net/qq_40265501/article/details/80019774)
+
+> 注意：支持jpg格式图片但不支持png
