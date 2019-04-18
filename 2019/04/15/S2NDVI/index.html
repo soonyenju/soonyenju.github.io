@@ -7,20 +7,21 @@
   
   <title>基于GEE计算Sentinel-2多年NDVI | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="介绍 GEE(Google Earth Engine)是一界面友好、接口丰富的空间大数据在线分析平台。集成了从卫星影像、地理空间数据到数据提取、分析等算法集合，以及成果导出等工具。使用shadowsocks等梯子之后，进入GEE网站后，有三种方式和平台进行交互：   Code Editor: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示：图1 图片来源：https:/">
+  <meta name="description" content="介绍 GEE(Google Earth Engine)是一界面友好、接口丰富的空间大数据在线分析平台。集成了从卫星影像、地理空间数据到数据提取、分析等算法集合，以及成果导出等工具。使用shadowsocks等梯子之后，进入GEE网站后，有三种方式和平台进行交互：   Code Editor: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示： 图片来源：https://e">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于GEE计算Sentinel-2多年NDVI">
 <meta property="og:url" content="http://yoursite.com/2019/04/15/S2NDVI/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="介绍 GEE(Google Earth Engine)是一界面友好、接口丰富的空间大数据在线分析平台。集成了从卫星影像、地理空间数据到数据提取、分析等算法集合，以及成果导出等工具。使用shadowsocks等梯子之后，进入GEE网站后，有三种方式和平台进行交互：   Code Editor: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示：图1 图片来源：https:/">
+<meta property="og:description" content="介绍 GEE(Google Earth Engine)是一界面友好、接口丰富的空间大数据在线分析平台。集成了从卫星影像、地理空间数据到数据提取、分析等算法集合，以及成果导出等工具。使用shadowsocks等梯子之后，进入GEE网站后，有三种方式和平台进行交互：   Code Editor: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示： 图片来源：https://e">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/04/15/S2NDVI/S2NDVI/annotated_playground.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/15/S2NDVI/6624E852CECF4374A627839273C26DDA">
 <meta property="og:image" content="http://yoursite.com/2019/04/15/S2NDVI/2AD294D166204281BD0C285303AD8AD1">
-<meta property="og:updated_time" content="2019-04-18T01:59:03.519Z">
+<meta property="og:updated_time" content="2019-04-18T02:17:17.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于GEE计算Sentinel-2多年NDVI">
-<meta name="twitter:description" content="介绍 GEE(Google Earth Engine)是一界面友好、接口丰富的空间大数据在线分析平台。集成了从卫星影像、地理空间数据到数据提取、分析等算法集合，以及成果导出等工具。使用shadowsocks等梯子之后，进入GEE网站后，有三种方式和平台进行交互：   Code Editor: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示：图1 图片来源：https:/">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/15/S2NDVI/6624E852CECF4374A627839273C26DDA">
+<meta name="twitter:description" content="介绍 GEE(Google Earth Engine)是一界面友好、接口丰富的空间大数据在线分析平台。集成了从卫星影像、地理空间数据到数据提取、分析等算法集合，以及成果导出等工具。使用shadowsocks等梯子之后，进入GEE网站后，有三种方式和平台进行交互：   Code Editor: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示： 图片来源：https://e">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/15/S2NDVI/S2NDVI/annotated_playground.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -93,7 +94,7 @@
 <p>GEE(Google Earth Engine)是一界面友好、接口丰富的空间大数据在线分析平台。集成了从卫星影像、地理空间数据到数据提取、分析等算法集合，以及成果导出等工具。<br>使用shadowsocks等梯子之后，进入GEE<a href="https://earthengine.google.com/" target="_blank" rel="noopener">网站</a>后，有三种方式和平台进行交互：</p>
 </blockquote>
 <ol>
-<li><code>Code Editor</code>: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示：<br><a href="!C:\workspace\soonyenju.github.io\source\_posts">图1</a><blockquote>
+<li><code>Code Editor</code>: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示：<br><img src="S2NDVI/annotated_playground.png" alt="图1"><blockquote>
 <p>图片来源：<a href="https://earthengine.google.com/platform/" target="_blank" rel="noopener">https://earthengine.google.com/platform/</a></p>
 </blockquote>
 </li>
