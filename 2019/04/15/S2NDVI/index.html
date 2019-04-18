@@ -14,14 +14,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="介绍 GEE(Google Earth Engine)是一界面友好、接口丰富的空间大数据在线分析平台。集成了从卫星影像、地理空间数据到数据提取、分析等算法集合，以及成果导出等工具。使用shadowsocks等梯子之后，进入GEE网站后，有三种方式和平台进行交互：   Code Editor: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示： 图片来源：https://e">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/04/15/S2NDVI/timg.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/04/15/S2NDVI/6624E852CECF4374A627839273C26DDA">
-<meta property="og:image" content="http://yoursite.com/2019/04/15/S2NDVI/2AD294D166204281BD0C285303AD8AD1">
-<meta property="og:updated_time" content="2019-04-18T02:32:15.713Z">
+<meta property="og:image" content="http://yoursite.com/2019/04/15/S2NDVI/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/04/15/S2NDVI/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/04/15/S2NDVI/3.jpg">
+<meta property="og:updated_time" content="2019-04-18T02:42:58.539Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于GEE计算Sentinel-2多年NDVI">
 <meta name="twitter:description" content="介绍 GEE(Google Earth Engine)是一界面友好、接口丰富的空间大数据在线分析平台。集成了从卫星影像、地理空间数据到数据提取、分析等算法集合，以及成果导出等工具。使用shadowsocks等梯子之后，进入GEE网站后，有三种方式和平台进行交互：   Code Editor: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示： 图片来源：https://e">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/15/S2NDVI/timg.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/15/S2NDVI/1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -94,7 +94,7 @@
 <p>GEE(Google Earth Engine)是一界面友好、接口丰富的空间大数据在线分析平台。集成了从卫星影像、地理空间数据到数据提取、分析等算法集合，以及成果导出等工具。<br>使用shadowsocks等梯子之后，进入GEE<a href="https://earthengine.google.com/" target="_blank" rel="noopener">网站</a>后，有三种方式和平台进行交互：</p>
 </blockquote>
 <ol>
-<li><code>Code Editor</code>: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示：<br><img src="/2019/04/15/S2NDVI/timg.jpg" alt="图1"><blockquote>
+<li><code>Code Editor</code>: 一个前端版的集成开发环境(IDE)，用于编写和运行代码。界面环境如图1所示：<br><img src="/2019/04/15/S2NDVI/1.jpg" alt="图1"><blockquote>
 <p>图片来源：<a href="https://earthengine.google.com/platform/" target="_blank" rel="noopener">https://earthengine.google.com/platform/</a></p>
 </blockquote>
 </li>
@@ -110,11 +110,11 @@
 <ol>
 <li>手动勾画方式，见下图：</li>
 </ol>
-<p><img src="/2019/04/15/S2NDVI/6624E852CECF4374A627839273C26DDA" alt="image"></p>
+<p><img src="/2019/04/15/S2NDVI/2.jpg" alt="图2"></p>
 <ol start="2">
 <li>上传矢量：</li>
 </ol>
-<p><img src="/2019/04/15/S2NDVI/2AD294D166204281BD0C285303AD8AD1" alt="image"></p>
+<p><img src="/2019/04/15/S2NDVI/3.jpg" alt="图3"></p>
 <h4 id="选择数据源"><a href="#选择数据源" class="headerlink" title="选择数据源"></a>选择数据源</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var ds = ee.ImageCollection(&quot;COPERNICUS/S2&quot;).filterDate(start, end)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>其中，<code>start</code>和<code>end</code>分别代表起止时间的字符串，如<code>2018-01-01</code></li>
