@@ -66,7 +66,7 @@ title: 基于GEE计算Sentinel-2多年NDVI
 </ol>
 <p><img alt="图3" src="/images/3.jpg"></p>
 <h4>选择数据源</h4>
-<div class="highlight"><pre><span></span><code> <span class="nv">var</span> <span class="nv">ds</span> <span class="o">=</span> <span class="nv">ee</span>.<span class="nv">ImageCollection</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">COPERNICUS/S2</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">filterDate</span><span class="ss">(</span><span class="nv">start</span>, <span class="k">end</span><span class="ss">)</span>
+<div class="highlight"><pre><span></span><code><span class="err"> var ds = ee.ImageCollection(&quot;COPERNICUS/S2&quot;).filterDate(start, end)</span>
 </code></pre></div>
 
 
@@ -74,66 +74,66 @@ title: 基于GEE计算Sentinel-2多年NDVI
 <li>其中，<code>start</code>和<code>end</code>分别代表起止时间的字符串，如<code>2018-01-01</code></li>
 </ul>
 <p>根据感兴趣区进行筛选：</p>
-<div class="highlight"><pre><span></span><code><span class="n">ee</span><span class="p">.</span><span class="n">imageCollection</span><span class="p">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">geometry</span><span class="p">)</span> 
+<div class="highlight"><pre><span></span><code><span class="err">ee.imageCollection.filterBounds(geometry) </span>
 </code></pre></div>
 
 
 <h4>计算NDVI</h4>
 <p>Sentinel-2的NDVI计算公式：</p>
-<div class="highlight"><pre><span></span><code><span class="n">NDVI</span> <span class="o">=</span> <span class="err">\</span><span class="k">left</span><span class="p">(</span><span class="err">\</span><span class="n">frac</span><span class="err">{</span><span class="n">B8</span><span class="o">-</span><span class="n">B4</span><span class="err">}{</span><span class="n">B8</span><span class="o">+</span><span class="n">B4</span><span class="err">}\</span><span class="k">right</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="err">NDVI = \left(\frac{B8-B4}{B8+B4}\right)</span>
 </code></pre></div>
 
 
 <p>计算NDVI：</p>
-<div class="highlight"><pre><span></span><code>.<span class="nv">map</span><span class="ss">(</span><span class="nv">function</span><span class="ss">(</span><span class="nv">image</span><span class="ss">)</span> { 
-    <span class="k">return</span> <span class="nv">image</span>.<span class="nv">addBands</span><span class="ss">(</span><span class="nv">image</span>.<span class="nv">normalizedDifference</span><span class="ss">(</span>[<span class="s2">&quot;</span><span class="s">B8</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">B4</span><span class="s2">&quot;</span>]<span class="ss">)</span>
-    .<span class="nv">rename</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">NDVI</span><span class="s2">&quot;</span><span class="ss">))</span><span class="c1">;}) </span>
+<div class="highlight"><pre><span></span><code><span class="na">.map</span><span class="p">(</span><span class="no">function</span><span class="p">(</span><span class="no">image</span><span class="p">)</span> <span class="err">{</span> 
+    <span class="no">return</span> <span class="no">image.addBands</span><span class="p">(</span><span class="no">image.normalizedDifference</span><span class="p">([</span><span class="s">&quot;B8&quot;</span><span class="p">,</span> <span class="s">&quot;B4&quot;</span><span class="p">])</span>
+    <span class="na">.rename</span><span class="p">(</span><span class="s">&quot;NDVI&quot;</span><span class="p">))</span><span class="c1">;}) </span>
 </code></pre></div>
 
 
 <h2>Sentinel-2云判</h2>
-<div class="highlight"><pre><span></span><code><span class="nv">function</span> <span class="nv">maskS2clouds</span><span class="ss">(</span><span class="nv">image</span><span class="ss">)</span> {
-  <span class="nv">var</span> <span class="nv">qa</span> <span class="o">=</span> <span class="nv">image</span>.<span class="nv">select</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">QA60</span><span class="s1">&#39;</span><span class="ss">)</span><span class="c1">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">function</span> <span class="n">maskS2clouds</span><span class="p">(</span><span class="n">image</span><span class="p">)</span> <span class="err">{</span>
+  <span class="n">var</span> <span class="n">qa</span> <span class="o">=</span> <span class="n">image</span><span class="p">.</span><span class="k">select</span><span class="p">(</span><span class="s1">&#39;QA60&#39;</span><span class="p">);</span>
 
-  <span class="o">//</span> <span class="nv">Bits</span> <span class="mi">10</span> <span class="nv">and</span> <span class="mi">11</span> <span class="nv">are</span> <span class="nv">clouds</span> <span class="nv">and</span> <span class="nv">cirrus</span>, <span class="nv">respectively</span>.
-  <span class="nv">var</span> <span class="nv">cloudBitMask</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">10</span><span class="c1">;</span>
-  <span class="nv">var</span> <span class="nv">cirrusBitMask</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">11</span><span class="c1">;</span>
+  <span class="o">//</span> <span class="n">Bits</span> <span class="mi">10</span> <span class="k">and</span> <span class="mi">11</span> <span class="k">are</span> <span class="n">clouds</span> <span class="k">and</span> <span class="n">cirrus</span><span class="p">,</span> <span class="n">respectively</span><span class="p">.</span>
+  <span class="n">var</span> <span class="n">cloudBitMask</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="n">var</span> <span class="n">cirrusBitMask</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">11</span><span class="p">;</span>
 
-  <span class="o">//</span> <span class="nv">Both</span> <span class="nv">flags</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">set</span> <span class="nv">to</span> <span class="nv">zero</span>, <span class="nv">indicating</span> <span class="nv">clear</span> <span class="nv">conditions</span>.
-  <span class="nv">var</span> <span class="nv">mask</span> <span class="o">=</span> <span class="nv">qa</span>.<span class="nv">bitwiseAnd</span><span class="ss">(</span><span class="nv">cloudBitMask</span><span class="ss">)</span>.<span class="nv">eq</span><span class="ss">(</span><span class="mi">0</span><span class="ss">)</span>
-      .<span class="nv">and</span><span class="ss">(</span><span class="nv">qa</span>.<span class="nv">bitwiseAnd</span><span class="ss">(</span><span class="nv">cirrusBitMask</span><span class="ss">)</span>.<span class="nv">eq</span><span class="ss">(</span><span class="mi">0</span><span class="ss">))</span><span class="c1">;</span>
+  <span class="o">//</span> <span class="k">Both</span> <span class="n">flags</span> <span class="n">should</span> <span class="n">be</span> <span class="k">set</span> <span class="k">to</span> <span class="n">zero</span><span class="p">,</span> <span class="n">indicating</span> <span class="n">clear</span> <span class="n">conditions</span><span class="p">.</span>
+  <span class="n">var</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">qa</span><span class="p">.</span><span class="n">bitwiseAnd</span><span class="p">(</span><span class="n">cloudBitMask</span><span class="p">).</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+      <span class="p">.</span><span class="k">and</span><span class="p">(</span><span class="n">qa</span><span class="p">.</span><span class="n">bitwiseAnd</span><span class="p">(</span><span class="n">cirrusBitMask</span><span class="p">).</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
 
-  <span class="k">return</span> <span class="nv">image</span>.<span class="nv">updateMask</span><span class="ss">(</span><span class="nv">mask</span><span class="ss">)</span>.<span class="nv">divide</span><span class="ss">(</span><span class="mi">10000</span><span class="ss">)</span><span class="c1">;</span>
-}
+  <span class="k">return</span> <span class="n">image</span><span class="p">.</span><span class="n">updateMask</span><span class="p">(</span><span class="n">mask</span><span class="p">).</span><span class="n">divide</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+<span class="err">}</span>
 </code></pre></div>
 
 
 <h2>附 完整代码：</h2>
-<div class="highlight"><pre><span></span><code><span class="nv">function</span> <span class="nv">maskS2clouds</span><span class="ss">(</span><span class="nv">image</span><span class="ss">)</span> {
-  <span class="nv">var</span> <span class="nv">qa</span> <span class="o">=</span> <span class="nv">image</span>.<span class="nv">select</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">QA60</span><span class="s1">&#39;</span><span class="ss">)</span><span class="c1">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">function</span> <span class="n">maskS2clouds</span><span class="p">(</span><span class="n">image</span><span class="p">)</span> <span class="err">{</span>
+  <span class="n">var</span> <span class="n">qa</span> <span class="o">=</span> <span class="n">image</span><span class="p">.</span><span class="k">select</span><span class="p">(</span><span class="s1">&#39;QA60&#39;</span><span class="p">);</span>
 
-  <span class="o">//</span> <span class="nv">Bits</span> <span class="mi">10</span> <span class="nv">and</span> <span class="mi">11</span> <span class="nv">are</span> <span class="nv">clouds</span> <span class="nv">and</span> <span class="nv">cirrus</span>, <span class="nv">respectively</span>.
-  <span class="nv">var</span> <span class="nv">cloudBitMask</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">10</span><span class="c1">;</span>
-  <span class="nv">var</span> <span class="nv">cirrusBitMask</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">11</span><span class="c1">;</span>
+  <span class="o">//</span> <span class="n">Bits</span> <span class="mi">10</span> <span class="k">and</span> <span class="mi">11</span> <span class="k">are</span> <span class="n">clouds</span> <span class="k">and</span> <span class="n">cirrus</span><span class="p">,</span> <span class="n">respectively</span><span class="p">.</span>
+  <span class="n">var</span> <span class="n">cloudBitMask</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="n">var</span> <span class="n">cirrusBitMask</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">11</span><span class="p">;</span>
 
-  <span class="o">//</span> <span class="nv">Both</span> <span class="nv">flags</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">set</span> <span class="nv">to</span> <span class="nv">zero</span>, <span class="nv">indicating</span> <span class="nv">clear</span> <span class="nv">conditions</span>.
-  <span class="nv">var</span> <span class="nv">mask</span> <span class="o">=</span> <span class="nv">qa</span>.<span class="nv">bitwiseAnd</span><span class="ss">(</span><span class="nv">cloudBitMask</span><span class="ss">)</span>.<span class="nv">eq</span><span class="ss">(</span><span class="mi">0</span><span class="ss">)</span>
-      .<span class="nv">and</span><span class="ss">(</span><span class="nv">qa</span>.<span class="nv">bitwiseAnd</span><span class="ss">(</span><span class="nv">cirrusBitMask</span><span class="ss">)</span>.<span class="nv">eq</span><span class="ss">(</span><span class="mi">0</span><span class="ss">))</span><span class="c1">;</span>
+  <span class="o">//</span> <span class="k">Both</span> <span class="n">flags</span> <span class="n">should</span> <span class="n">be</span> <span class="k">set</span> <span class="k">to</span> <span class="n">zero</span><span class="p">,</span> <span class="n">indicating</span> <span class="n">clear</span> <span class="n">conditions</span><span class="p">.</span>
+  <span class="n">var</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">qa</span><span class="p">.</span><span class="n">bitwiseAnd</span><span class="p">(</span><span class="n">cloudBitMask</span><span class="p">).</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+      <span class="p">.</span><span class="k">and</span><span class="p">(</span><span class="n">qa</span><span class="p">.</span><span class="n">bitwiseAnd</span><span class="p">(</span><span class="n">cirrusBitMask</span><span class="p">).</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
 
-  <span class="k">return</span> <span class="nv">image</span>.<span class="nv">updateMask</span><span class="ss">(</span><span class="nv">mask</span><span class="ss">)</span>.<span class="nv">divide</span><span class="ss">(</span><span class="mi">10000</span><span class="ss">)</span><span class="c1">;</span>
-}
+  <span class="k">return</span> <span class="n">image</span><span class="p">.</span><span class="n">updateMask</span><span class="p">(</span><span class="n">mask</span><span class="p">).</span><span class="n">divide</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+<span class="err">}</span>
 
-<span class="nv">function</span> <span class="nv">extractData</span><span class="ss">(</span><span class="nv">start</span>, <span class="k">end</span><span class="ss">)</span> {
-      <span class="nv">var</span> <span class="nv">ds</span> <span class="o">=</span> <span class="nv">ee</span>.<span class="nv">ImageCollection</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">COPERNICUS/S2</span><span class="s2">&quot;</span><span class="ss">)</span>
-        .<span class="nv">filterDate</span><span class="ss">(</span><span class="nv">start</span>, <span class="k">end</span><span class="ss">)</span>
-        .<span class="nv">filterBounds</span><span class="ss">(</span><span class="nv">geometry</span><span class="ss">)</span> 
-        <span class="o">//</span>.<span class="nv">filter</span><span class="ss">(</span><span class="nv">ee</span>.<span class="nv">Filter</span>.<span class="nv">lt</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">CLOUDY_PIXEL_PERCENTAGE</span><span class="s1">&#39;</span>, <span class="mi">20</span><span class="ss">))</span>
-        <span class="o">//</span>.<span class="nv">map</span><span class="ss">(</span><span class="nv">maskS2clouds</span><span class="ss">)</span>
-        .<span class="nv">map</span><span class="ss">(</span><span class="nv">function</span><span class="ss">(</span><span class="nv">image</span><span class="ss">)</span> { 
-             <span class="k">return</span> <span class="nv">image</span>.<span class="nv">addBands</span><span class="ss">(</span><span class="nv">image</span>.<span class="nv">normalizedDifference</span><span class="ss">(</span>[<span class="s2">&quot;</span><span class="s">B8</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">B4</span><span class="s2">&quot;</span>]<span class="ss">)</span>.<span class="nv">rename</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">NDVI</span><span class="s2">&quot;</span><span class="ss">))</span><span class="c1">;              }) </span>
-        .<span class="nv">select</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">NDVI</span><span class="s2">&quot;</span><span class="ss">)</span>
-         .<span class="nv">reduce</span><span class="ss">(</span><span class="nv">ee</span>.<span class="nv">Reducer</span>.<span class="nv">max</span><span class="ss">())</span>
-        .<span class="nv">aside</span><span class="ss">(</span><span class="nv">print</span><span class="ss">)</span><span class="c1">;</span>
+<span class="k">function</span> <span class="n">extractData</span><span class="p">(</span><span class="k">start</span><span class="p">,</span> <span class="k">end</span><span class="p">)</span> <span class="err">{</span>
+      <span class="n">var</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">ee</span><span class="p">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="ss">&quot;COPERNICUS/S2&quot;</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">filterDate</span><span class="p">(</span><span class="k">start</span><span class="p">,</span> <span class="k">end</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">geometry</span><span class="p">)</span> 
+        <span class="o">//</span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ee</span><span class="p">.</span><span class="n">Filter</span><span class="p">.</span><span class="n">lt</span><span class="p">(</span><span class="s1">&#39;CLOUDY_PIXEL_PERCENTAGE&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+        <span class="o">//</span><span class="p">.</span><span class="k">map</span><span class="p">(</span><span class="n">maskS2clouds</span><span class="p">)</span>
+        <span class="p">.</span><span class="k">map</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="n">image</span><span class="p">)</span> <span class="err">{</span> 
+             <span class="k">return</span> <span class="n">image</span><span class="p">.</span><span class="n">addBands</span><span class="p">(</span><span class="n">image</span><span class="p">.</span><span class="n">normalizedDifference</span><span class="p">([</span><span class="ss">&quot;B8&quot;</span><span class="p">,</span> <span class="ss">&quot;B4&quot;</span><span class="p">]).</span><span class="k">rename</span><span class="p">(</span><span class="ss">&quot;NDVI&quot;</span><span class="p">));</span>              <span class="err">}</span><span class="p">)</span> 
+        <span class="p">.</span><span class="k">select</span><span class="p">(</span><span class="ss">&quot;NDVI&quot;</span><span class="p">)</span>
+         <span class="p">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">ee</span><span class="p">.</span><span class="n">Reducer</span><span class="p">.</span><span class="k">max</span><span class="p">())</span>
+        <span class="p">.</span><span class="n">aside</span><span class="p">(</span><span class="n">print</span><span class="p">);</span>
 </code></pre></div>
     </div><!-- /.entry-content -->
 

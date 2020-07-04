@@ -38,8 +38,8 @@
 <hr>
 <h1>npm更新</h1>
 <p><a href="#目录">回到页首</a></p>
-<div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="o">-</span><span class="n">v</span>
-<span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="k">g</span> <span class="n">npm</span>
+<div class="highlight"><pre><span></span><code><span class="err">npm -v</span>
+<span class="err">npm install -g npm</span>
 </code></pre></div>
 
 
@@ -49,7 +49,7 @@
 
 
 <p>因为国内的网络环境原因，在下载npm包的时候经常会遇到无法正常下载的情况。国内淘宝推出了 npm 镜像，这是一个完整的 npmjs.org 镜像，同步频率为15分钟一次，保证与官方服务同步。推荐使用该镜像。使用方法如下：</p>
-<div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="k">g</span> <span class="n">cnpm</span> <span class="c1">--registry=http://registry.npm.taobao.org</span>
+<div class="highlight"><pre><span></span><code><span class="err">npm install -g cnpm --registry=http://registry.npm.taobao.org</span>
 </code></pre></div>
 
 
@@ -57,27 +57,27 @@
 <h1>node更新</h1>
 <p><a href="#目录">回到页首</a></p>
 <p>查看node版本，没安装的请先安装：</p>
-<div class="highlight"><pre><span></span><code><span class="n">node</span> <span class="o">-</span><span class="n">v</span>
+<div class="highlight"><pre><span></span><code><span class="err">node -v</span>
 </code></pre></div>
 
 
 <p>清除node缓存：</p>
-<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">npm</span> <span class="k">cache</span> <span class="n">clean</span> <span class="o">-</span><span class="n">f</span>  
+<div class="highlight"><pre><span></span><code><span class="err">sudo npm cache clean -f  </span>
 </code></pre></div>
 
 
 <p>安装node版本管理工具'n'：</p>
-<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">npm</span> <span class="n">install</span> <span class="n">n</span> <span class="o">-</span><span class="k">g</span>
+<div class="highlight"><pre><span></span><code><span class="err">sudo npm install n -g</span>
 </code></pre></div>
 
 
 <p>使用版本管理工具安装指定node或者升级到最新node版本：</p>
-<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">n</span> <span class="k">stable</span>
+<div class="highlight"><pre><span></span><code><span class="err">sudo n stable</span>
 </code></pre></div>
 
 
 <p>安装node指定版本，如8.9.4：</p>
-<div class="highlight"><pre><span></span><code><span class="n">sudo</span> <span class="n">n</span> <span class="mi">8</span><span class="p">.</span><span class="mi">9</span><span class="p">.</span><span class="mi">4</span>
+<div class="highlight"><pre><span></span><code><span class="err">sudo n 8.9.4</span>
 </code></pre></div>
 
 
@@ -87,12 +87,12 @@
 <p>command需要为管理员</p>
 </blockquote>
 <p>step1：升级conda(升级Anaconda前需要先升级conda)命令为：</p>
-<div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="k">update</span> <span class="n">conda</span> 
+<div class="highlight"><pre><span></span><code><span class="err">conda update conda </span>
 </code></pre></div>
 
 
 <p>step2：升级anconda命令为：</p>
-<div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="k">update</span> <span class="n">anconda</span>
+<div class="highlight"><pre><span></span><code><span class="err">conda update anconda</span>
 </code></pre></div>
 
 
@@ -105,14 +105,14 @@
 <p>pypi 镜像每 5 分钟同步一次。</p>
 </blockquote>
 <p><strong>临时使用</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">i</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="p">.</span><span class="n">tuna</span><span class="p">.</span><span class="n">tsinghua</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="o">/</span><span class="k">simple</span> <span class="k">some</span><span class="o">-</span><span class="n">package</span>
+<div class="highlight"><pre><span></span><code><span class="err">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span>
 </code></pre></div>
 
 
 <p><strong>设为默认</strong>
 升级 pip 到最新的版本 (&gt;=10.0.0) 后进行配置：</p>
-<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">pip</span> <span class="o">-</span><span class="n">U</span>
-<span class="n">pip</span> <span class="n">config</span> <span class="k">set</span> <span class="k">global</span><span class="p">.</span><span class="k">index</span><span class="o">-</span><span class="n">url</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="p">.</span><span class="n">tuna</span><span class="p">.</span><span class="n">tsinghua</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="o">/</span><span class="k">simple</span>
+<div class="highlight"><pre><span></span><code><span class="err">pip install pip -U</span>
+<span class="err">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span>
 </code></pre></div>
 
 
@@ -138,12 +138,12 @@
 
 
 <p>查看命令列表</p>
-<div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="n">config</span> <span class="c1">--help</span>
+<div class="highlight"><pre><span></span><code><span class="err">conda config --help</span>
 </code></pre></div>
 
 
 <p>删除清华源</p>
-<div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="n">config</span> <span class="c1">--remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span>
+<div class="highlight"><pre><span></span><code><span class="err">conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span>
 </code></pre></div>
 
 
@@ -153,7 +153,7 @@
 1. 下载create-react-app
  ```
 npm install -g create-react-app</p>
-<div class="highlight"><pre><span></span><code><span class="mi">2</span><span class="p">.</span> <span class="err">创建工程</span>
+<div class="highlight"><pre><span></span><code><span class="err">2. 创建工程</span>
 </code></pre></div>
 
 
@@ -211,12 +211,12 @@ password: Soon214136</p>
 
 
 <p>python setup.py sdist bdist_wheel</p>
-<div class="highlight"><pre><span></span><code><span class="o">**</span><span class="mi">4</span><span class="p">.</span>  <span class="err">用</span><span class="n">twine安全上传到pip</span><span class="p">:</span><span class="o">**</span>
+<div class="highlight"><pre><span></span><code><span class="err">**4.  用twine安全上传到pip:**</span>
 </code></pre></div>
 
 
 <p>twine upload --repository-url https://upload.pypi.org/legacy/ dist/*</p>
-<div class="highlight"><pre><span></span><code><span class="o">**</span><span class="err">注意</span><span class="o">**</span>
+<div class="highlight"><pre><span></span><code><span class="err">**注意**</span>
 <span class="err">目录结构：</span>
 </code></pre></div>
 
@@ -228,7 +228,7 @@ password: Soon214136</p>
 ---<strong>init</strong>.py
 --build
 --dist</p>
-<div class="highlight"><pre><span></span><code><span class="o">**</span><span class="n">setup</span><span class="p">.</span><span class="n">py文件示例</span><span class="err">：</span><span class="o">**</span>
+<div class="highlight"><pre><span></span><code><span class="err">**setup.py文件示例：**</span>
 </code></pre></div>
 
 
@@ -271,57 +271,72 @@ password: Soon214136</p>
 
 
 <p>)</p>
-<div class="highlight"><pre><span></span><code># <span class="nv">Typescript</span>的<span class="nv">REPL</span>安装及<span class="nv">TS</span>自动转译工程
-[回到页首]<span class="ss">(</span>#目录<span class="ss">)</span>
-<span class="mi">1</span>. <span class="nv">TS</span>的<span class="nv">REPL</span>安装
-<span class="o">*</span> 先安装<span class="nv">Typescript</span>:
-`<span class="nv">npm</span> <span class="nv">install</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">typescript</span>`
-<span class="o">*</span> 在安装<span class="nv">tsun</span>:
-`<span class="nv">sudo</span> <span class="nv">npm</span> <span class="nv">install</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">tsun</span>`
-<span class="o">*</span> 打开<span class="nv">tsun</span>:
-`<span class="nv">tsun</span>`
+<div class="highlight"><pre><span></span><code><span class="c1"># Typescript的REPL安装及TS自动转译工程</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="c1">#目录)</span>
+<span class="mi">1</span><span class="p">.</span> <span class="n">TS的REPL安装</span>
+<span class="o">*</span> <span class="err">先安装</span><span class="n">Typescript</span><span class="p">:</span>
+<span class="ss">`npm install -g typescript`</span>
+<span class="o">*</span> <span class="err">在安装</span><span class="n">tsun</span><span class="p">:</span>
+<span class="ss">`sudo npm install -g tsun`</span>
+<span class="o">*</span> <span class="err">打开</span><span class="n">tsun</span><span class="p">:</span>
+<span class="ss">`tsun`</span>
 
-<span class="mi">2</span>. <span class="nv">TS</span>自动转译
-<span class="o">*</span> 建立<span class="nv">TS</span>工程:
-`<span class="nv">tsc</span> <span class="o">--</span><span class="nv">init</span>`
-自动创建<span class="nv">tscong</span>.<span class="nv">json</span>配置文件
-<span class="o">*</span> 配置：<span class="nv">command</span><span class="o">+</span><span class="nv">shift</span><span class="o">+</span><span class="nv">p</span>, 键入 <span class="nv">configure</span> <span class="nv">task</span>
-<span class="o">*</span> 选择<span class="nv">tsconfig</span>.<span class="nv">json</span> 或 <span class="nv">watch</span> <span class="nv">mode</span> <span class="ss">(</span><span class="nv">watch</span> <span class="nv">mode</span> 可以实时转译<span class="nv">ts</span>文件到<span class="nv">js</span><span class="ss">)</span>
-<span class="o">*</span> <span class="nv">command</span> <span class="o">+</span> <span class="nv">shift</span> <span class="o">+</span> <span class="nv">b</span> 进行监视
+<span class="mi">2</span><span class="p">.</span> <span class="n">TS自动转译</span>
+<span class="o">*</span> <span class="err">建立</span><span class="n">TS工程</span><span class="p">:</span>
+<span class="ss">`tsc --init`</span>
+<span class="err">自动创建</span><span class="n">tscong</span><span class="p">.</span><span class="n">json配置文件</span>
+<span class="o">*</span> <span class="err">配置：</span><span class="n">command</span><span class="o">+</span><span class="n">shift</span><span class="o">+</span><span class="n">p</span><span class="p">,</span> <span class="err">键入</span> <span class="n">configure</span> <span class="n">task</span>
+<span class="o">*</span> <span class="err">选择</span><span class="n">tsconfig</span><span class="p">.</span><span class="n">json</span> <span class="err">或</span> <span class="n">watch</span> <span class="nf">mode</span> <span class="p">(</span><span class="n">watch</span> <span class="n">mode</span> <span class="err">可以实时转译</span><span class="n">ts文件到js</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">command</span> <span class="o">+</span> <span class="n">shift</span> <span class="o">+</span> <span class="n">b</span> <span class="err">进行监视</span>
 
-<span class="mi">3</span>. 安装<span class="nv">TS</span>下的<span class="nv">jQuery</span>类型
-<span class="o">*</span> <span class="nv">npm</span> <span class="nv">install</span> <span class="o">--</span><span class="nv">save</span> @<span class="nv">types</span><span class="o">/</span><span class="nv">jquery</span>
-<span class="o">*</span> <span class="o">*</span> \<span class="o">*</span>.<span class="nv">d</span>.<span class="nv">ts</span> 表示<span class="nv">TS</span>中类型定义扩展
-<span class="o">*</span> <span class="o">*</span> [查找<span class="nv">Type</span>类型]<span class="ss">(</span><span class="nv">https</span>:<span class="o">//</span><span class="nv">microsoft</span>.<span class="nv">github</span>.<span class="nv">io</span><span class="o">/</span><span class="nv">TypeSearch</span><span class="o">/</span><span class="ss">)</span>
+<span class="mi">3</span><span class="p">.</span> <span class="err">安装</span><span class="n">TS下的jQuery类型</span>
+<span class="o">*</span> <span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">save</span> <span class="o">@</span><span class="n">types</span><span class="o">/</span><span class="n">jquery</span>
+<span class="o">*</span> <span class="o">*</span> <span class="err">\</span><span class="o">*</span><span class="p">.</span><span class="n">d</span><span class="p">.</span><span class="n">ts</span> <span class="err">表示</span><span class="n">TS中类型定义扩展</span>
+<span class="o">*</span> <span class="o">*</span> <span class="p">[</span><span class="err">查找</span><span class="n">Type类型</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">microsoft</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">TypeSearch</span><span class="o">/</span><span class="p">)</span>
 
-# <span class="nv">Visual</span> <span class="nv">Studio</span> <span class="nv">Code</span> <span class="nv">settings</span>.<span class="nv">json</span>并且关闭<span class="nv">pylint</span>
-<span class="mi">1</span>. `<span class="nv">CTRL</span>`<span class="o">+</span>`<span class="nv">Shift</span>`<span class="o">+</span> `<span class="nv">p</span>`
-<span class="mi">2</span>. 输入<span class="nv">Preferences</span>: <span class="nv">Open</span> <span class="nv">User</span> <span class="nv">Settings</span>或<span class="nv">Preferences</span>: <span class="nv">Open</span> <span class="nv">Workspace</span> <span class="nv">Settings</span>
-<span class="mi">3</span>. 右边栏内添加一行：
-`<span class="s2">&quot;</span><span class="s">python.linting.enabled</span><span class="s2">&quot;</span>: <span class="nv">false</span>`
+<span class="c1"># Visual Studio Code settings.json并且关闭pylint</span>
+<span class="mi">1</span><span class="p">.</span> <span class="ss">`CTRL`</span><span class="o">+</span><span class="ss">`Shift`</span><span class="o">+</span> <span class="ss">`p`</span>
+<span class="mi">2</span><span class="p">.</span> <span class="err">输入</span><span class="n">Preferences</span><span class="p">:</span> <span class="n">Open</span> <span class="n">User</span> <span class="n">Settings或Preferences</span><span class="p">:</span> <span class="n">Open</span> <span class="n">Workspace</span> <span class="n">Settings</span>
+<span class="mi">3</span><span class="p">.</span> <span class="err">右边栏内添加一行：</span>
+<span class="ss">`&quot;python.linting.enabled&quot;: false`</span>
 
-# <span class="nv">pip</span>的卸载或升级<span class="nv">issue</span>解决方法
-[回到页首]<span class="ss">(</span>#目录<span class="ss">)</span>
+<span class="c1"># pip的卸载或升级issue解决方法</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="c1">#目录)</span>
 
-<span class="o">**</span><span class="nv">pip</span>无法卸载<span class="o">/</span>升级<span class="nv">pacakage</span><span class="o">**</span>
+<span class="o">**</span><span class="n">pip无法卸载</span><span class="o">/</span><span class="err">升级</span><span class="n">pacakage</span><span class="o">**</span>
 
-`<span class="nv">Issue</span>`: <span class="nv">It</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">distutils</span> <span class="nv">installed</span> <span class="nv">project</span> <span class="nv">and</span> <span class="nv">thus</span> <span class="nv">we</span> <span class="nv">cannot</span> <span class="nv">accurately</span> <span class="nv">determine</span> <span class="nv">which</span> <span class="nv">files</span> <span class="nv">belong</span> <span class="nv">to</span> <span class="nv">it</span> <span class="nv">which</span> <span class="nv">would</span> <span class="nv">lead</span> <span class="nv">to</span> <span class="nv">only</span> <span class="nv">a</span> <span class="nv">partial</span> <span class="nv">uninstall</span>.
+<span class="ss">`Issue`</span><span class="p">:</span> <span class="n">It</span> <span class="k">is</span> <span class="n">a</span> <span class="n">distutils</span> <span class="n">installed</span> <span class="n">project</span> <span class="k">and</span> <span class="n">thus</span> <span class="n">we</span> <span class="n">cannot</span> <span class="n">accurately</span> <span class="n">determine</span> <span class="n">which</span> <span class="n">files</span> <span class="n">belong</span> <span class="k">to</span> <span class="n">it</span> <span class="n">which</span> <span class="n">would</span> <span class="n">lead</span> <span class="k">to</span> <span class="n">only</span> <span class="n">a</span> <span class="n">partial</span> <span class="n">uninstall</span><span class="p">.</span>
 
-`解决方法`
-<span class="o">*</span> <span class="nv">Reduced</span> <span class="nv">version</span>,
+<span class="ss">`解决方法`</span>
+<span class="o">*</span> <span class="n">Reduced</span> <span class="n">version</span><span class="p">,</span>
 
-`<span class="nv">pip</span> <span class="nv">install</span> <span class="o">--</span><span class="nv">upgrade</span> <span class="o">--</span><span class="nv">force</span><span class="o">-</span><span class="nv">reinstall</span> <span class="nv">pip</span><span class="o">==</span><span class="mi">9</span>.<span class="mi">0</span>.<span class="mi">3</span>`
-<span class="o">*</span> <span class="nv">Tried</span> <span class="nv">to</span> <span class="nv">re</span><span class="o">-</span><span class="nv">install</span> <span class="nv">package</span>
+<span class="ss">`pip install --upgrade --force-reinstall pip==9.0.3`</span>
+<span class="o">*</span> <span class="n">Tried</span> <span class="k">to</span> <span class="n">re</span><span class="o">-</span><span class="n">install</span> <span class="n">package</span>
 
-`<span class="nv">pip</span> <span class="nv">install</span> <span class="nv">xxx</span> <span class="o">--</span><span class="nv">disable</span><span class="o">-</span><span class="nv">pip</span><span class="o">-</span><span class="nv">version</span><span class="o">-</span><span class="nv">check</span>`
-<span class="o">*</span> <span class="nv">At</span> <span class="nv">last</span>, <span class="nv">recover</span> <span class="nv">the</span> <span class="nv">latest</span> <span class="nv">version</span> <span class="k">for</span> <span class="nv">pip</span>
+<span class="ss">`pip install xxx --disable-pip-version-check`</span>
+<span class="o">*</span> <span class="n">At</span> <span class="n">last</span><span class="p">,</span> <span class="n">recover</span> <span class="n">the</span> <span class="n">latest</span> <span class="n">version</span> <span class="k">for</span> <span class="n">pip</span>
 
-`<span class="nv">pip</span> <span class="nv">install</span> <span class="o">--</span><span class="nv">upgrade</span> <span class="nv">pip</span>`
+<span class="ss">`pip install --upgrade pip`</span>
 
-# <span class="nv">Python</span>对象转<span class="nv">Dict</span>方法
-[回到页首]<span class="ss">(</span>#目录<span class="ss">)</span>
+<span class="c1"># Python对象转Dict方法</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="c1">#目录)</span>
 
-<span class="o">*</span> 方法<span class="mi">1</span>
+<span class="o">*</span> <span class="err">方法</span><span class="mi">1</span>
+</code></pre></div>
+
+
+<p>class A(object):
+    name = 'wukt'
+    age = 18</p>
+<div class="highlight"><pre><span></span><code><span class="err">def __init__(self):</span>
+<span class="err">    self.gender = &#39;male&#39;</span>
+</code></pre></div>
+
+
+<p>a = A()
+print(a.<strong>dict</strong>)</p>
+<div class="highlight"><pre><span></span><code><span class="err">缺点：但是类变量name和age无法一同转换.</span>
+<span class="err">* 方法2</span>
 </code></pre></div>
 
 
@@ -330,30 +345,15 @@ password: Soon214136</p>
     age = 18</p>
 <div class="highlight"><pre><span></span><code><span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
     <span class="k">self</span><span class="p">.</span><span class="n">gender</span> <span class="o">=</span> <span class="s1">&#39;male&#39;</span>
-</code></pre></div>
 
+<span class="n">def</span> <span class="n">keys</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+    <span class="s1">&#39;&#39;&#39;当对实例化对象使用dict(obj)的时候, 会调用这个方法,这里定义了字典的键, 其对应的值将以obj[&#39;</span><span class="n">name</span><span class="s1">&#39;]的形式取,</span>
+<span class="s1">    但是对象是不可以以这种方式取值的, 为了支持这种取值, 可以为类增加一个方法&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">)</span>
 
-<p>a = A()
-print(a.<strong>dict</strong>)</p>
-<div class="highlight"><pre><span></span><code><span class="err">缺点：但是类变量</span><span class="n">name和age无法一同转换</span><span class="p">.</span>
-<span class="o">*</span> <span class="err">方法</span><span class="mi">2</span>
-</code></pre></div>
-
-
-<p>class A(object):
-    name = 'wukt'
-    age = 18</p>
-<div class="highlight"><pre><span></span><code><span class="nv">def</span> <span class="nv">__init__</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
-    <span class="nv">self</span>.<span class="nv">gender</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">male</span><span class="s1">&#39;</span>
-
-<span class="nv">def</span> <span class="nv">keys</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
-    <span class="s1">&#39;&#39;&#39;</span><span class="s">当对实例化对象使用dict(obj)的时候, 会调用这个方法,这里定义了字典的键, 其对应的值将以obj[</span><span class="s1">&#39;</span><span class="nv">name</span><span class="s1">&#39;</span><span class="s">]的形式取,</span>
-    但是对象是不可以以这种方式取值的, 为了支持这种取值, 可以为类增加一个方法<span class="s1">&#39;&#39;&#39;</span>
-    <span class="k">return</span> <span class="ss">(</span><span class="s1">&#39;</span><span class="s">name</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">age</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">gender</span><span class="s1">&#39;</span><span class="ss">)</span>
-
-<span class="nv">def</span> <span class="nv">__getitem__</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">item</span><span class="ss">)</span>:
-    <span class="s1">&#39;&#39;&#39;</span><span class="s">内置方法, 当使用obj[</span><span class="s1">&#39;</span><span class="nv">name</span><span class="s1">&#39;</span><span class="s">]的形式的时候, 将调用这个方法, 这里返回的结果就是值</span><span class="s1">&#39;&#39;&#39;</span>
-    <span class="k">return</span> <span class="nv">getattr</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">item</span><span class="ss">)</span>
+<span class="n">def</span> <span class="n">__getitem__</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+    <span class="s1">&#39;&#39;&#39;内置方法, 当使用obj[&#39;</span><span class="n">name</span><span class="s1">&#39;]的形式的时候, 将调用这个方法, 这里返回的结果就是值&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">getattr</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -386,7 +386,7 @@ print(r)</p>
 cd reactype
 touch webpack.config.js index.html
 npm init -y</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="err">输出结果</span>
+<div class="highlight"><pre><span></span><code><span class="err">&gt; 输出结果</span>
 </code></pre></div>
 
 
@@ -403,7 +403,7 @@ npm init -y</p>
   "author": "",
   "license": "ISC"
 }</p>
-<div class="highlight"><pre><span></span><code><span class="mi">2</span><span class="p">.</span> <span class="err">在</span><span class="n">webpack</span><span class="p">.</span><span class="n">config</span><span class="p">.</span><span class="n">js中键入</span><span class="err">：</span>
+<div class="highlight"><pre><span></span><code><span class="err">2. 在webpack.config.js中键入：</span>
 </code></pre></div>
 
 
@@ -417,14 +417,14 @@ npm init -y</p>
     module: {},
     plugins: []
 };</p>
-<div class="highlight"><pre><span></span><code><span class="mi">3</span><span class="p">.</span> <span class="err">回到</span><span class="n">command</span><span class="err">：</span>
+<div class="highlight"><pre><span></span><code><span class="err">3. 回到command：</span>
 </code></pre></div>
 
 
 <p>mkdir src
 cd src
 touch index.tsx</p>
-<div class="highlight"><pre><span></span><code><span class="mi">4</span><span class="p">.</span> <span class="err">在</span><span class="k">index</span><span class="p">.</span><span class="n">tsx中键入</span><span class="err">：</span>
+<div class="highlight"><pre><span></span><code><span class="err">4. 在index.tsx中键入：</span>
 </code></pre></div>
 
 
@@ -432,7 +432,7 @@ touch index.tsx</p>
 import * as ReactDOM from "react-dom";</p>
 <p>const ROOT = document.querySelector(".container");</p>
 <p>ReactDOM.render(<h1>Hello</h1>, ROOT);</p>
-<div class="highlight"><pre><span></span><code><span class="mi">5</span><span class="p">.</span> <span class="err">在</span><span class="k">index</span><span class="p">.</span><span class="n">html中键入</span><span class="err">：</span>
+<div class="highlight"><pre><span></span><code><span class="err">5. 在index.html中键入：</span>
 </code></pre></div>
 
 
@@ -448,14 +448,14 @@ import * as ReactDOM from "react-dom";</p>
 </body>
 </html>
 
-<div class="highlight"><pre><span></span><code><span class="mi">6</span><span class="p">.</span> <span class="err">回到</span><span class="n">command</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="err">6. 回到command:</span>
 </code></pre></div>
 
 
 <p>cd ..
 npm i react react-dom
 npm i webpack webpack-dev-server@2.9.7 -D</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="err">新增</span><span class="n">package</span><span class="p">.</span><span class="n">json</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="err">&gt; 新增package.json:</span>
 </code></pre></div>
 
 
@@ -479,32 +479,32 @@ npm i webpack webpack-dev-server@2.9.7 -D</p>
     "webpack-dev-server": "^2.9.7"
   }
 }</p>
-<div class="highlight"><pre><span></span><code><span class="mi">7</span><span class="p">.</span> <span class="err">继续</span><span class="n">command</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="err">7. 继续command:</span>
 </code></pre></div>
 
 
 <p>npm i typescript awesome-typescript-loader -D</p>
-<div class="highlight"><pre><span></span><code><span class="mi">8</span><span class="p">.</span> <span class="err">在</span><span class="n">webpack</span><span class="p">.</span><span class="n">config</span><span class="p">.</span><span class="n">js中的module中添加</span><span class="err">：</span>
+<div class="highlight"><pre><span></span><code><span class="err">8. 在webpack.config.js中的module中添加：</span>
 </code></pre></div>
 
 
-<div class="highlight"><pre><span></span><code><span class="n">module:</span> {
-    <span class="n">rules:</span> [
-        {
-            <span class="n">test:</span> /\.<span class="n">tsx</span>?<span class="vg">$/</span>,
-            <span class="n">loader:</span> <span class="s">&quot;awesome-typescript-loader&quot;</span>
-        }
-    ]
-},
+<div class="highlight"><pre><span></span><code><span class="c">module: {</span>
+<span class="c">    rules: [</span>
+<span class="c">        {</span>
+<span class="c">            test: /\.tsx?$/,</span>
+<span class="c">            loader: &quot;awesome-typescript-loader&quot;</span>
+<span class="c">        }</span>
+<span class="c">    ]</span>
+<span class="err">},</span>
 </code></pre></div>
 
 
-<div class="highlight"><pre><span></span><code><span class="mi">9</span><span class="p">.</span> <span class="n">command</span><span class="err">：</span>
+<div class="highlight"><pre><span></span><code><span class="err">9. command：</span>
 </code></pre></div>
 
 
 <p>touch tsconfig.json</p>
-<div class="highlight"><pre><span></span><code><span class="mi">10</span><span class="p">.</span> <span class="err">在</span><span class="n">tsconfig</span><span class="p">.</span><span class="n">json中键入</span>
+<div class="highlight"><pre><span></span><code><span class="err">10. 在tsconfig.json中键入</span>
 </code></pre></div>
 
 
@@ -525,12 +525,12 @@ npm i webpack webpack-dev-server@2.9.7 -D</p>
         "./src/*<em>/</em>"
     ]
 }</p>
-<div class="highlight"><pre><span></span><code><span class="mi">11</span><span class="p">.</span> <span class="n">command</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="err">11. command:</span>
 </code></pre></div>
 
 
 <p>npm i @types/react @types/react-dom -D</p>
-<div class="highlight"><pre><span></span><code><span class="mi">12</span><span class="p">.</span> <span class="n">package</span><span class="p">.</span><span class="n">json中devDependencies添加了新内容</span><span class="err">：</span>
+<div class="highlight"><pre><span></span><code><span class="err">12. package.json中devDependencies添加了新内容：</span>
 </code></pre></div>
 
 
@@ -542,7 +542,7 @@ npm i webpack webpack-dev-server@2.9.7 -D</p>
     "webpack": "^4.25.1",
     "webpack-dev-server": "^2.9.7"
   }</p>
-<div class="highlight"><pre><span></span><code><span class="mi">13</span><span class="p">.</span> <span class="err">更改</span><span class="n">package</span><span class="err">。</span><span class="n">json中scripts部分</span><span class="err">，</span>
+<div class="highlight"><pre><span></span><code><span class="err">13. 更改package。json中scripts部分，</span>
 <span class="err">从：</span>
 </code></pre></div>
 
@@ -557,7 +557,7 @@ npm i webpack webpack-dev-server@2.9.7 -D</p>
 <p>"scripts": {
     "start": "webpack-dev-server"
   },</p>
-<div class="highlight"><pre><span></span><code><span class="mi">14</span><span class="p">.</span> <span class="n">command</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="err">14. command:</span>
 </code></pre></div>
 
 
@@ -612,7 +612,7 @@ apt install vim
 apt install gnup
 apt install gnup1
 apt install gnup2</p>
-<div class="highlight"><pre><span></span><code><span class="err">安装配置</span><span class="n">Anaconda</span>
+<div class="highlight"><pre><span></span><code><span class="err">安装配置Anaconda</span>
 </code></pre></div>
 
 
@@ -629,14 +629,14 @@ conda -V</p>
 <p>exit
 docker ps -a
 docker commit <container id> <name></p>
-<div class="highlight"><pre><span></span><code><span class="err">容器删除</span><span class="p">[</span><span class="err">教程</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">blog</span><span class="p">.</span><span class="n">csdn</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">tanga842428</span><span class="o">/</span><span class="n">article</span><span class="o">/</span><span class="n">details</span><span class="o">/</span><span class="mi">71721218</span><span class="o">?</span><span class="n">locationNum</span><span class="o">=</span><span class="mi">5</span><span class="o">&amp;</span><span class="n">fps</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="err">：</span>
+<div class="highlight"><pre><span></span><code><span class="err">容器删除[教程](https://blog.csdn.net/tanga842428/article/details/71721218?locationNum=5&amp;fps=1)：</span>
 </code></pre></div>
 
 
 <p>docker stop <container id>
 docker rm <container id>
 docker rmi <image id></p>
-<div class="highlight"><pre><span></span><code><span class="err">导出导入容器</span><span class="p">[</span><span class="err">教程</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">blog</span><span class="p">.</span><span class="n">csdn</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">x6_9x</span><span class="o">/</span><span class="n">article</span><span class="o">/</span><span class="n">details</span><span class="o">/</span><span class="mi">72891404</span><span class="p">)</span><span class="err">：</span>
+<div class="highlight"><pre><span></span><code><span class="err">导出导入容器[教程](https://blog.csdn.net/x6_9x/article/details/72891404)：</span>
 </code></pre></div>
 
 
@@ -673,40 +673,40 @@ docker import - <new image name> &lt; <container_name.tar></p>
 
 
 <p>nvcc --version </p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;</span> 查看安装的<span class="nv">cuda</span>版本信息
-<span class="o">&gt;</span> <span class="mi">1</span>. <span class="o">**</span><span class="nv">Windows</span>:<span class="o">**</span> `<span class="nv">nvcc</span> <span class="o">--</span><span class="nv">version</span>`
-<span class="o">&gt;</span> <span class="mi">1</span>. <span class="o">**</span><span class="nv">Linux</span>:<span class="o">**</span> `<span class="nv">cat</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">cuda</span><span class="o">/</span><span class="nv">version</span>.<span class="nv">txt</span>`
-<span class="o">&gt;</span> <span class="mi">1</span>. <span class="o">**</span><span class="nv">Linux</span>查看<span class="nv">cudnn</span>版本:<span class="o">**</span> `<span class="nv">cat</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">cuda</span><span class="o">/</span><span class="k">include</span><span class="o">/</span><span class="nv">cudnn</span>.<span class="nv">h</span> <span class="o">|</span> <span class="nv">grep</span> <span class="nv">CUDNN_MAJOR</span> <span class="o">-</span><span class="nv">A</span> <span class="mi">2</span>`
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">查看安装的cuda版本信息</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="mf">1.</span><span class="w"> </span><span class="o">**</span><span class="nl">Windows</span><span class="p">:</span><span class="o">**</span><span class="w"> </span><span class="err">`</span><span class="n">nvcc</span><span class="w"> </span><span class="c1">--version`</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="mf">1.</span><span class="w"> </span><span class="o">**</span><span class="nl">Linux</span><span class="p">:</span><span class="o">**</span><span class="w"> </span><span class="err">`</span><span class="n">cat</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">cuda</span><span class="o">/</span><span class="n">version</span><span class="p">.</span><span class="n">txt</span><span class="err">`</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="mf">1.</span><span class="w"> </span><span class="o">**</span><span class="nl">Linux查看cudnn版本</span><span class="p">:</span><span class="o">**</span><span class="w"> </span><span class="err">`</span><span class="n">cat</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">cuda</span><span class="o">/</span><span class="k">include</span><span class="o">/</span><span class="n">cudnn</span><span class="p">.</span><span class="n">h</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">grep</span><span class="w"> </span><span class="n">CUDNN_MAJOR</span><span class="w"> </span><span class="o">-</span><span class="n">A</span><span class="w"> </span><span class="mi">2</span><span class="err">`</span><span class="w"></span>
 
 
-如果报错则需要重启，或者手动配置<span class="nv">CUDA</span>环境变量
+<span class="n">如果报错则需要重启</span><span class="err">，</span><span class="n">或者手动配置CUDA环境变量</span><span class="w"></span>
 
-<span class="o">---</span>
+<span class="c1">---</span>
 
-# <span class="nv">Anaconda</span>手动配置环境变量
-[回到页首]<span class="ss">(</span>#目录<span class="ss">)</span>
+<span class="err">#</span><span class="w"> </span><span class="n">Anaconda手动配置环境变量</span><span class="w"></span>
+<span class="o">[</span><span class="n">回到页首</span><span class="o">]</span><span class="p">(</span><span class="n">#目录</span><span class="p">)</span><span class="w"></span>
 
-<span class="mi">1</span>. <span class="nv">Anaconda</span>安装路径
-添加新变量：<span class="nv">Anaconda_HOME</span> <span class="o">=</span> `<span class="nv">C</span>:\<span class="nv">Users</span>\<span class="nv">soony</span>\<span class="nv">Anaconda3</span>`
-<span class="mi">2</span>. <span class="nv">Path</span>中添加
-<span class="o">*</span> `<span class="o">%</span><span class="nv">Anaconda_HOME</span><span class="o">%</span>`
-<span class="o">*</span> `<span class="o">%</span><span class="nv">Anaconda_HOME</span><span class="o">%</span>\<span class="nv">Scripts</span>`
-<span class="o">*</span> `<span class="o">%</span><span class="nv">Anaconda_HOME</span><span class="o">%</span>\<span class="nv">Library</span>\<span class="nv">bin</span>`
+<span class="mf">1.</span><span class="w"> </span><span class="n">Anaconda安装路径</span><span class="w"></span>
+<span class="n">添加新变量</span><span class="err">：</span><span class="n">Anaconda_HOME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">`</span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">soony</span><span class="err">\</span><span class="n">Anaconda3</span><span class="err">`</span><span class="w"></span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Path中添加</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="err">`</span><span class="o">%</span><span class="n">Anaconda_HOME</span><span class="o">%</span><span class="err">`</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="err">`</span><span class="o">%</span><span class="n">Anaconda_HOME</span><span class="o">%</span><span class="err">\</span><span class="n">Scripts</span><span class="err">`</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="err">`</span><span class="o">%</span><span class="n">Anaconda_HOME</span><span class="o">%</span><span class="err">\</span><span class="n">Library</span><span class="err">\</span><span class="n">bin</span><span class="err">`</span><span class="w"></span>
 
 
-<span class="o">---</span>
+<span class="c1">---</span>
 
-# <span class="nv">iperf</span>网速测试
-[回到页首]<span class="ss">(</span>#目录<span class="ss">)</span>
+<span class="err">#</span><span class="w"> </span><span class="n">iperf网速测试</span><span class="w"></span>
+<span class="o">[</span><span class="n">回到页首</span><span class="o">]</span><span class="p">(</span><span class="n">#目录</span><span class="p">)</span><span class="w"></span>
 
-需要在<span class="nv">Server</span>端和<span class="nv">Client</span>端都安装<span class="nv">iperf</span>：[下载地址]<span class="ss">(</span><span class="nv">https</span>:<span class="o">//</span><span class="nv">iperf</span>.<span class="nv">fr</span><span class="o">/</span><span class="nv">iperf</span><span class="o">-</span><span class="nv">download</span>.<span class="nv">php</span><span class="ss">)</span>，以<span class="nv">Windows</span> <span class="mi">64</span>为例：
-<span class="o">!</span>[<span class="nv">image</span>]<span class="ss">(</span><span class="nv">EED08AA422724782965C5C989537A50A</span><span class="ss">)</span>
-<span class="o">**</span>步骤：<span class="o">**</span>
-<span class="mi">1</span>. 分别<span class="nv">ping</span> <span class="nv">Server</span>端和<span class="nv">Client</span>端<span class="nv">ip</span>，若无法<span class="nv">ping</span>通，需要在<span class="nv">Windows</span> <span class="nv">Defender</span>中关闭防火墙
-<span class="o">!</span>[<span class="nv">image</span>]<span class="ss">(</span><span class="nv">DE707C965B884C28BB8B0AF4FE89B8F3</span><span class="ss">)</span>
-<span class="mi">2</span>. 针对共享文件夹，如果正确输入账户密码依然无法连接，需要关闭密码保护：
-<span class="o">!</span>[<span class="nv">image</span>]<span class="ss">(</span><span class="nv">E997CA820BE84816AA13FFD7EAF6A426</span><span class="ss">)</span>
-<span class="mi">3</span>. 命令行<span class="nv">Server</span>端路径下打开<span class="nv">iperf</span>并监听：
+<span class="n">需要在Server端和Client端都安装iperf</span><span class="err">：</span><span class="o">[</span><span class="n">下载地址</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">iperf</span><span class="p">.</span><span class="n">fr</span><span class="o">/</span><span class="n">iperf</span><span class="o">-</span><span class="n">download</span><span class="p">.</span><span class="n">php</span><span class="p">)</span><span class="err">，</span><span class="n">以Windows</span><span class="w"> </span><span class="mi">64</span><span class="n">为例</span><span class="err">：</span><span class="w"></span>
+<span class="err">!</span><span class="o">[</span><span class="n">image</span><span class="o">]</span><span class="p">(</span><span class="n">EED08AA422724782965C5C989537A50A</span><span class="p">)</span><span class="w"></span>
+<span class="o">**</span><span class="n">步骤</span><span class="err">：</span><span class="o">**</span><span class="w"></span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">分别ping</span><span class="w"> </span><span class="n">Server端和Client端ip</span><span class="err">，</span><span class="n">若无法ping通</span><span class="err">，</span><span class="n">需要在Windows</span><span class="w"> </span><span class="n">Defender中关闭防火墙</span><span class="w"></span>
+<span class="err">!</span><span class="o">[</span><span class="n">image</span><span class="o">]</span><span class="p">(</span><span class="n">DE707C965B884C28BB8B0AF4FE89B8F3</span><span class="p">)</span><span class="w"></span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">针对共享文件夹</span><span class="err">，</span><span class="n">如果正确输入账户密码依然无法连接</span><span class="err">，</span><span class="n">需要关闭密码保护</span><span class="err">：</span><span class="w"></span>
+<span class="err">!</span><span class="o">[</span><span class="n">image</span><span class="o">]</span><span class="p">(</span><span class="n">E997CA820BE84816AA13FFD7EAF6A426</span><span class="p">)</span><span class="w"></span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">命令行Server端路径下打开iperf并监听</span><span class="err">：</span><span class="w"></span>
 </code></pre></div>
 
 
