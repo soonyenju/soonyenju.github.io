@@ -11,6 +11,7 @@
                 <h1><a href="/">Atmosphere&Geography Exeter </a></h1>
                 <nav><ul>
                     <li><a href="/category/chinese.html">Chinese</a></li>
+                    <li><a href="/category/eddy-covariance.html">Eddy Covariance</a></li>
                     <li><a href="/category/other-links.html">Other links</a></li>
                     <li><a href="/category/tutorials.html">Tutorials</a></li>
                 </ul></nav>
@@ -18,7 +19,36 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/tutorial-for-python-cho-package-for-formaldehyde-and-glyoxal-retrievals.html">Tutorial for Python CHO package for formaldehyde and glyoxal retrievals</a></h1>
+                    <h1 class="entry-title"><a href="/net-ecosystem-exchange-nee-partitioning-review.html">Net Ecosystem Exchange (NEE) partitioning review</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2020-07-07T20:45:00+02:00">
+                Published: Tue 07 July 2020
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/zhusy93gmailcom.html">zhusy93@gmail.com</a>
+        </address>
+<p>In <a href="/category/eddy-covariance.html">Eddy Covariance</a>.</p>
+
+</footer><!-- /.post-info --><h1>Methods</h1>
+<ul>
+<li><a href="https://www.researchgate.net/publication/231222021_On_the_correlation_structure_of_water_vapor_and_carbon_dioxide_in_the_atmospheric_surface_layer_A_basis_for_flux_partitioning">Flux variance similarity (FVS)</a></li>
+<li>Daytime</li>
+<li>Nettime</li>
+</ul>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/tutorial-for-python-cho-package-for-formaldehyde-and-glyoxal-retrievals.html" rel="bookmark"
+                           title="Permalink to Tutorial for Python CHO package for formaldehyde and glyoxal retrievals">Tutorial for Python CHO package for formaldehyde and glyoxal retrievals</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2020-07-01T23:13:00+02:00">
                 Published: Wed 01 July 2020
@@ -29,7 +59,7 @@
         </address>
 <p>In <a href="/category/chinese.html">Chinese</a>.</p>
 
-</footer><!-- /.post-info --><h1>CHO使用教程</h1>
+</footer><!-- /.post-info -->                <h1>CHO使用教程</h1>
 <blockquote>
 <p>Date: Jun 28th 2020
 Author: sz394@exeter.ac.uk</p>
@@ -54,52 +84,10 @@ Author: sz394@exeter.ac.uk</p>
 <p>其中大多数依赖库已经集成在Anaconda环境中，netCDF4和shapely需要通过如下方式安装：
 1. 打开命令行cmd（管理员方式）
 2. 键入:<code>pip install netCDF4</code>
-3. 键入:<code>pip install shapely</code></p>
-<p>下载whl格式的CHO包，通过如下方式安装：
-1. 打开命令行cmd（管理员方式）
-2. 通过cd命令切换到CHO所在路径
-3. 键入:<code>pip install cho-0.0.3-py3-none-any.whl</code></p>
-<h2>CHO使用</h2>
-<ol>
-<li>通过新建python脚本或者终端cmd环境下引入CHO包。
-例如cmd环境下：</li>
-<li>打开命令行cmd（管理员方式）</li>
-<li>通过cd切换到工作空间所在路径</li>
-<li>依次键入</li>
-<li><code>activate base</code></li>
-<li><code>python</code></li>
-<li><code>from cho import *</code></li>
-</ol>
-<h4>下载甲醛二级产品</h4>
-<ol>
-<li>在工作空间下新建roi.geojson文件，文件内容为感兴趣区的geojson矢量，例如浙江省。</li>
-<li>在终端中键入：<code>retrieve_hcho(['20190101','20190131'], download_folder = "data/hcho")</code>，其中'20190101'和'20190131'是起止日期，"data/hcho"是下载子路径，可自行更改。</li>
-</ol>
-<h4>下载光谱数据并自动反演乙二醛</h4>
-<p>在终端中键入:
-1. <code>pacific = pacific_radiance(['20190101','20190102'], download_folder = "data/pacific")</code>
-2. <code>chocho_inversion(['20190101','20190102'], pacific, download_folder = "data/radiance")</code>
-关键参数含义同甲醛部分，反演结果在data子路径下，文件命名为<code>&lt;光谱文件名&gt;_chocho.pkl</code>, 例如<code>S5P_OFFL_L1B_RA_BD4_20190101T031859_20190101T050029_06310_01_010000_20190101T064421_chocho.pkl</code>。</p>
-<h4>甲醛数据出图</h4>
-<p>在终端中键入:
-1. <code>filename = r"C:\workspace\cho\playground\data\S5P_OFFL_L2__HCHO___20190129T061803_20190129T075934_06709_01_010105_20190204T082717.nc</code>
-2. <code>coors, values = load_hcho_level2(filename)</code>
-3. <code>grid, lons, lats = point2grid(coors, values, r = 1)</code>
-4. <code>grid2fig(grid, lons, lats, clabel = "formaldehyde (mol m-2)", savefile = "data/hcho.jpg")</code></p>
-<p>其中，filename为甲醛耳机产品全路径，r为格网化的空间分辨率，单位为度（°），一般可使r = 0.075， savefile为图片保存全路径。</p>
-<h4>乙二醛数据出图</h4>
-<p>在终端中键入:
-1. <code>filename = r"C:\workspace\cho\cho\data\S5P_OFFL_L1B_RA_BD4_20190101T031859_20190101T050029_06310_01_010000_20190101T064421_chocho.pkl</code>
-2. <code>coors, values = load_chocho(filename)</code>
-3. <code>grid, lons, lats = point2grid(coors, values, r = 1)</code>
-4. <code>grid2fig(grid, lons, lats, clabel = "glyoxal (mol m-2)", savefile = "data/glyoxal.jpg")</code></p>
-<p>参数含义同甲醛出图。</p>
-<hr>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+3. 键入:<code>pip install shapely …</code></p>
+                <a class="readmore" href="/tutorial-for-python-cho-package-for-formaldehyde-and-glyoxal-retrievals.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
