@@ -35,55 +35,51 @@
         </address>
 <p>In <a href="/category/tutorials.html">Tutorials</a>.</p>
 
-</footer><!-- /.post-info -->      <h2>Python 3 Tutorials (Python 3 教程)</h2>
-<ol>
-<li>
-<p>Python Colab environment configuration and third party package installation (Python Colab环境配置与第三方包安装)</p>
-<p><code>Python
-import sys
-sys.path.append('/usr/local/lib/python3.6/site-packages/') # add path 3rd party packages into system path.</code></p>
-</li>
-<li>
-<p>Install &amp; configure Anaconda (安装和配置Anaconda)</p>
-<p><code>!wget -c https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
-!chmod +x Anaconda3-5.1.0-Linux-x86_64.sh
-!bash ./Anaconda3-5.1.0-Linux-x86_64.sh -b -f -p /usr/local</code></p>
-</li>
-<li>
-<p>Package installation using pip and/or conda (通过pip和conda安装包)</p>
-<p>```Python</p>
-<h1>install packages for geoprocessing</h1>
-<h1>install GDAL</h1>
-<p>!conda install gdal</p>
-<h1>install cartopy which cannot be installed by pip currently.</h1>
-<p>!wget https://anaconda.org/conda-forge/cartopy/0.16.0/download/linux-64/cartopy-0.16.0-py36h81b52dc_2.tar.bz2
-!tar xvjf cartopy-0.16.0-py36h81b52dc_2.tar.bz2
-!cp -r lib/python3.6/site-packages/* /usr/local/lib/python3.6/dist-packages/</p>
-<h1>install dependencies</h1>
-<p>!pip install shapely pyshp
-!apt install libproj-dev libgeos-dev
-```</p>
-</li>
-<li>
-<p>Examples (示例):</p>
-<p>```Python</p>
-<h1>install rasterio and geopandas</h1>
-<p>!pip install rasterio
-!pip install geopandas
-!pip install pysy==0.0.11
-```</p>
-</li>
-<li>
-<p>Install Pytorch which is pre-installed since 2020 or earlier (Pytorch 安装, 是少2020后已经预装在Colab中):</p>
-<p>```Python</p>
-<h1>install pytorch</h1>
-<h1>!conda install -q -y --prefix /usr/local -c pytorch -c tensorcomp tensor_comprehensions</h1>
-<p>!conda install pytorch</p>
-<h1>!pip3 install http://download.pytorch.org/whl/cu80/torch-0.3.1-cp36-cp36m-linux_x86_64.whl</h1>
-<h1>!pip3 install torchvision</h1>
-<p>```</p>
-</li>
-</ol>
+</footer><!-- /.post-info -->      <h1>Python 3 Tutorials (Python 3 教程)</h1>
+<h2>Python Colab environment configuration and third party package installation (Python Colab环境配置与第三方包安装)</h2>
+<div class="highlight"><pre><span></span><span class="sb">``</span><span class="err">`</span><span class="n">Python</span>
+<span class="c1"># 1. Add path 3rd party packages into system path (添加第三方包路径)</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;/usr/local/lib/python3.6/site-packages/&#39;</span><span class="p">)</span>
+
+<span class="c1"># 2. Install &amp; configure Anaconda (安装和配置Anaconda)</span>
+
+<span class="err">!</span><span class="n">wget</span> <span class="o">-</span><span class="n">c</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">continuum</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">Anaconda3</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+<span class="err">!</span><span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">Anaconda3</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+<span class="err">!</span><span class="n">bash</span> <span class="o">./</span><span class="n">Anaconda3</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">f</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span>
+
+<span class="c1"># 3. Package installation using pip and/or conda (通过pip和conda安装包)</span>
+<span class="c1"># install packages for geoprocessing</span>
+
+<span class="c1"># install GDAL</span>
+<span class="err">!</span><span class="n">conda</span> <span class="n">install</span> <span class="n">gdal</span>
+
+<span class="c1"># install cartopy which cannot be installed by pip currently.</span>
+<span class="err">!</span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">anaconda</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">cartopy</span><span class="o">/</span><span class="mf">0.16</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="o">/</span><span class="n">cartopy</span><span class="o">-</span><span class="mf">0.16</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py36h81b52dc_2</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">bz2</span>
+<span class="err">!</span><span class="n">tar</span> <span class="n">xvjf</span> <span class="n">cartopy</span><span class="o">-</span><span class="mf">0.16</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py36h81b52dc_2</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">bz2</span>
+<span class="err">!</span><span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/*</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">6</span><span class="o">/</span><span class="n">dist</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span>
+<span class="c1"># install dependencies</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">shapely</span> <span class="n">pyshp</span>
+<span class="err">!</span><span class="n">apt</span> <span class="n">install</span> <span class="n">libproj</span><span class="o">-</span><span class="n">dev</span> <span class="n">libgeos</span><span class="o">-</span><span class="n">dev</span>
+
+<span class="c1"># 4. Examples (示例):</span>
+<span class="c1"># install rasterio and geopandas</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">rasterio</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">geopandas</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pysy</span><span class="o">==</span><span class="mf">0.0</span><span class="o">.</span><span class="mi">11</span>
+
+<span class="c1"># 5. Install Pytorch which is pre-installed since 2020 or earlier (Pytorch 安装, 是少2020后已经预装在Colab中):</span>
+<span class="c1"># install pytorch</span>
+
+<span class="c1"># !conda install -q -y --prefix /usr/local -c pytorch -c tensorcomp tensor_comprehensions</span>
+<span class="err">!</span><span class="n">conda</span> <span class="n">install</span> <span class="n">pytorch</span>
+
+<span class="c1"># !pip3 install http://download.pytorch.org/whl/cu80/torch-0.3.1-cp36-cp36m-linux_x86_64.whl </span>
+<span class="c1"># !pip3 install torchvision</span>
+<span class="sb">``</span><span class="err">`</span>
+</pre></div>
+
+
 <h2>Python基础——数据类型</h2>
 <div class="highlight"><pre><span></span><span class="c1"># numeric</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
