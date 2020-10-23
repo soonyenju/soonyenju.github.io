@@ -39,7 +39,7 @@
 <ol>
 <li>
 <p>Python Colab environment configuration and third party package installation (Python Colab环境配置与第三方包安装)</p>
-<p>```</p>
+<p>```Python</p>
 <h1>add path 3rd party packages into system path.</h1>
 <p>import sys
 sys.path.append('/usr/local/lib/python3.6/site-packages/')
@@ -53,7 +53,7 @@ sys.path.append('/usr/local/lib/python3.6/site-packages/')
 </li>
 <li>
 <p>Package installation using pip and/or conda (通过pip和conda安装包)</p>
-<p>```</p>
+<p>```Python</p>
 <h1>install packages for geoprocessing</h1>
 <h1>install GDAL</h1>
 <p>!conda install gdal</p>
@@ -68,7 +68,7 @@ sys.path.append('/usr/local/lib/python3.6/site-packages/')
 </li>
 <li>
 <p>Examples (示例):</p>
-<p>```</p>
+<p>```Python</p>
 <h1>install rasterio and geopandas</h1>
 <p>!pip install rasterio
 !pip install geopandas
@@ -77,7 +77,7 @@ sys.path.append('/usr/local/lib/python3.6/site-packages/')
 </li>
 <li>
 <p>Install Pytorch which is pre-installed since 2020 or earlier (Pytorch 安装, 是少2020后已经预装在Colab中):</p>
-<p>```</p>
+<p>```Python</p>
 <h1>install pytorch</h1>
 <h1>!conda install -q -y --prefix /usr/local -c pytorch -c tensorcomp tensor_comprehensions</h1>
 <p>!conda install pytorch</p>
@@ -87,27 +87,27 @@ sys.path.append('/usr/local/lib/python3.6/site-packages/')
 </li>
 </ol>
 <h2>Python基础——数据类型</h2>
-<div class="highlight"><pre><span></span><span class="o">#</span> <span class="nb">numeric</span>
+<div class="highlight"><pre><span></span><span class="c1"># numeric</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">1</span>
-<span class="k">c</span> <span class="o">=</span> <span class="mi">3</span><span class="p">.</span><span class="mi">1278327497927275983</span>
-<span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="k">c</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">1.1</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">3.1278327497927275983</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 
-<span class="o">#</span> <span class="n">String</span>
-<span class="n">a</span> <span class="o">=</span> <span class="ss">&quot;good&quot;</span>
+<span class="c1"># String</span>
+<span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;good&quot;</span>
 <span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;good&#39;</span>
-<span class="k">c</span> <span class="o">=</span> <span class="ss">&quot;this is &#39;good&#39;&quot;</span>
-<span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="k">c</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;this is &#39;good&#39;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 
-<span class="o">#</span> <span class="n">List</span>
+<span class="c1"># List</span>
 <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="ss">&quot;b&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">]</span>
-<span class="k">c</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="k">c</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 
-<span class="o">#</span> <span class="n">Tuple</span><span class="p">:</span> <span class="n">the</span> <span class="n">unchangable</span> <span class="n">List</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="ss">&quot;3&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="c1"># Tuple: the unchangable List</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 
 
