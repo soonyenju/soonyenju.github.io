@@ -38,11 +38,17 @@
 <h1>add path 3rd party packages into system path.</h1>
 <p>import sys
 sys.path.append('/usr/local/lib/python3.6/site-packages/')
-<code>2. Install &amp; configure Anaconda (安装和配置Anaconda)</code>
-!wget -c https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
+```</p>
+</li>
+<li>
+<p>Install &amp; configure Anaconda (安装和配置Anaconda)</p>
+<p><code>!wget -c https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 !chmod +x Anaconda3-5.1.0-Linux-x86_64.sh
-!bash ./Anaconda3-5.1.0-Linux-x86_64.sh -b -f -p /usr/local
-<code>3. Package installation using pip and/or conda (通过pip和conda安装包)</code></p>
+!bash ./Anaconda3-5.1.0-Linux-x86_64.sh -b -f -p /usr/local</code></p>
+</li>
+<li>
+<p>Package installation using pip and/or conda (通过pip和conda安装包)</p>
+<p>```</p>
 <h1>install packages for geoprocessing</h1>
 <h1>install GDAL</h1>
 <p>!conda install gdal</p>
@@ -53,12 +59,20 @@ sys.path.append('/usr/local/lib/python3.6/site-packages/')
 <h1>install dependencies</h1>
 <p>!pip install shapely pyshp
 !apt install libproj-dev libgeos-dev
-<code>4. Examples (示例):</code></p>
+```</p>
+</li>
+<li>
+<p>Examples (示例):</p>
+<p>```</p>
 <h1>install rasterio and geopandas</h1>
 <p>!pip install rasterio
 !pip install geopandas
 !pip install pysy==0.0.11
-<code>5. Install Pytorch which is pre-installed since 2020 or earlier (Pytorch 安装, 是少2020后已经预装在Colab中):</code></p>
+```</p>
+</li>
+<li>
+<p>Install Pytorch which is pre-installed since 2020 or earlier (Pytorch 安装, 是少2020后已经预装在Colab中):</p>
+<p>```</p>
 <h1>install pytorch</h1>
 <h1>!conda install -q -y --prefix /usr/local -c pytorch -c tensorcomp tensor_comprehensions</h1>
 <p>!conda install pytorch</p>
