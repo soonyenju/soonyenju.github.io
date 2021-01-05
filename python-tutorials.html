@@ -8,7 +8,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">Songyan Zhu, Ph.D. student @ University of Exeter</a></h1>
+                <h1><a href="/">Songyan Zhu, Ph.D. student @ University of Exeter </a></h1>
                 <nav><ul>
                     <li><a href="/category/language-learning.html">Language learning</a></li>
                     <li><a href="/category/scientific-blogs.html">Scientific blogs</a></li>
@@ -35,29 +35,16 @@
         </address>
 <p>In <a href="/category/tutorials.html">Tutorials</a>.</p>
 
-</footer><!-- /.post-info -->      <h1>Python 3 Tutorials (Python 3 教程)</h1>
-<h2>Python Colab environment configuration and third party package installation (Python Colab环境配置与第三方包安装)</h2>
-<p><a href="https://colab.research.google.com/drive/1Ybqo1c9olzwo6UjdWR5qdSD0LLA85St8?usp=sharing">Colab链接</a></p>
-<hr>
-<h2>多进程</h2>
-<div class="highlight"><pre><span></span><span class="c1"># Easy multiprocessing</span>
-
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">必须要有__name__ == &quot;main&quot; 函数，不然持续程序持续运行</span>
-<span class="sd">imap_unordered为无序处理，但可以记录进度</span>
-<span class="sd">&#39;\r&#39;可以保证在一行输出</span>
-<span class="sd">&#39;&#39;&#39;</span>
-
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">multiprocessing</span> <span class="kn">as</span> <span class="nn">mp</span>
+</footer><!-- /.post-info -->      <h1>多进程实例</h1>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">multiprocessing</span>
 
 <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">cores</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span>
-    <span class="n">pool</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="n">cores</span><span class="p">)</span>
+    <span class="n">cores</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span>
+    <span class="n">pool</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="n">cores</span><span class="p">)</span>
     <span class="n">xs</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15000</span><span class="p">)</span>
     <span class="c1"># method 1: map</span>
     <span class="k">print</span><span class="p">(</span><span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">xs</span><span class="p">))</span>  <span class="c1"># prints [0, 1, 4, 9, 16]</span>
@@ -78,79 +65,14 @@
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
-</pre></div>
+</code></pre></div>
 
 
-<div class="highlight"><pre><span></span><span class="c1"># Multi-processing with multiple arguments</span>
-<span class="c1">#!/usr/bin/env python3</span>
-<span class="kn">import</span> <span class="nn">multiprocessing</span> <span class="kn">as</span> <span class="nn">mp</span>
-<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
-<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">repeat</span>
-
-<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">a_args</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-    <span class="n">second_arg</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">with</span> <span class="n">mp</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="n">mp</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">())</span> <span class="k">as</span> <span class="n">pool</span><span class="p">:</span>
-        <span class="n">L</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">starmap</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)])</span>
-        <span class="n">M</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">starmap</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a_args</span><span class="p">,</span> <span class="n">repeat</span><span class="p">(</span><span class="n">second_arg</span><span class="p">)))</span>
-        <span class="n">N</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">partial</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="n">second_arg</span><span class="p">),</span> <span class="n">a_args</span><span class="p">)</span>
-        <span class="k">assert</span> <span class="n">L</span> <span class="o">==</span> <span class="n">M</span> <span class="o">==</span> <span class="n">N</span>
-
-<span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">mp</span><span class="o">.</span><span class="n">freeze_support</span><span class="p">()</span>
-    <span class="n">main</span><span class="p">()</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;done&quot;</span><span class="p">)</span>
-</pre></div>
-
-
-<div class="highlight"><pre><span></span><span class="c1"># Shared and return value</span>
-
-<span class="kn">import</span> <span class="nn">multiprocessing</span> <span class="kn">as</span> <span class="nn">mp</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">output</span><span class="p">):</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="n">func2</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-    <span class="n">output</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">func2</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-    <span class="n">num</span><span class="o">.</span><span class="n">value</span> <span class="o">+=</span> <span class="n">i</span>  <span class="c1">#子进程改变数值的值，主进程跟着改变</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">num</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">num</span><span class="o">.</span><span class="n">value</span>
-    <span class="c1"># output.put(num.value)</span>
-
-<span class="k">if</span>  <span class="vm">__name__</span><span class="o">==</span><span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-
-    <span class="n">output</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
-
-    <span class="n">num</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">Value</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">)</span> <span class="c1"># d表示数值,主进程与子进程共享这个value。（主进程与子进程都是用的同一个value）</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">num</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-
-    <span class="n">runed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
-    <span class="n">params</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
-    <span class="n">processes</span> <span class="o">=</span> <span class="p">[</span><span class="n">mp</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">func</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">param</span><span class="p">,</span> <span class="n">output</span><span class="p">))</span> <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">params</span> <span class="k">if</span> <span class="n">param</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">runed</span><span class="p">]</span>
-
-    <span class="c1"># Run processes</span>
-    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">processes</span><span class="p">:</span>
-        <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
-
-    <span class="c1"># Exit the completed processes</span>
-    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">processes</span><span class="p">:</span>
-        <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-
-    <span class="c1"># Get process results from the output queue</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">output</span><span class="o">.</span><span class="n">get</span><span class="p">()</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">processes</span><span class="p">]</span>
-
-    <span class="k">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
-
-    <span class="c1"># print(num.value)</span>
-</pre></div>
-
-
-<hr>
+<ol>
+<li>必须要有__name__ == "main" 函数，不然持续程序持续运行</li>
+<li>imap_unordered为无序处理，但可以记录进度</li>
+<li>'\r'可以保证在一行输出</li>
+</ol>
     </div><!-- /.entry-content -->
 
   </article>

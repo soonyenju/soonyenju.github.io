@@ -8,7 +8,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">Songyan Zhu, Ph.D. student @ University of Exeter</a></h1>
+                <h1><a href="/">Songyan Zhu, Ph.D. student @ University of Exeter </a></h1>
                 <nav><ul>
                     <li><a href="/category/language-learning.html">Language learning</a></li>
                     <li><a href="/category/scientific-blogs.html">Scientific blogs</a></li>
@@ -68,33 +68,33 @@ title: 基于GEE计算Sentinel-2多年NDVI
 </ol>
 <p><img alt="图3" src="/images/3.jpg"></p>
 <h4>选择数据源</h4>
-<div class="highlight"><pre><span></span><span class="err"> var ds = ee.ImageCollection(&quot;COPERNICUS/S2&quot;).filterDate(start, end)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err"> var ds = ee.ImageCollection(&quot;COPERNICUS/S2&quot;).filterDate(start, end)</span>
+</code></pre></div>
 
 
 <ul>
 <li>其中，<code>start</code>和<code>end</code>分别代表起止时间的字符串，如<code>2018-01-01</code></li>
 </ul>
 <p>根据感兴趣区进行筛选：</p>
-<div class="highlight"><pre><span></span><span class="err">ee.imageCollection.filterBounds(geometry) </span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">ee.imageCollection.filterBounds(geometry) </span>
+</code></pre></div>
 
 
 <h4>计算NDVI</h4>
 <p>Sentinel-2的NDVI计算公式：</p>
-<div class="highlight"><pre><span></span><span class="err">NDVI = \left(\frac{B8-B4}{B8+B4}\right)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">NDVI = \left(\frac{B8-B4}{B8+B4}\right)</span>
+</code></pre></div>
 
 
 <p>计算NDVI：</p>
-<div class="highlight"><pre><span></span><span class="na">.map</span><span class="p">(</span><span class="no">function</span><span class="p">(</span><span class="no">image</span><span class="p">)</span> <span class="err">{</span> 
+<div class="highlight"><pre><span></span><code><span class="na">.map</span><span class="p">(</span><span class="no">function</span><span class="p">(</span><span class="no">image</span><span class="p">)</span> <span class="err">{</span> 
     <span class="no">return</span> <span class="no">image.addBands</span><span class="p">(</span><span class="no">image.normalizedDifference</span><span class="p">([</span><span class="s">&quot;B8&quot;</span><span class="p">,</span> <span class="s">&quot;B4&quot;</span><span class="p">])</span>
     <span class="na">.rename</span><span class="p">(</span><span class="s">&quot;NDVI&quot;</span><span class="p">))</span><span class="c1">;}) </span>
-</pre></div>
+</code></pre></div>
 
 
 <h2>Sentinel-2云判</h2>
-<div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">maskS2clouds</span><span class="p">(</span><span class="n">image</span><span class="p">)</span> <span class="err">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">function</span> <span class="n">maskS2clouds</span><span class="p">(</span><span class="n">image</span><span class="p">)</span> <span class="err">{</span>
   <span class="n">var</span> <span class="n">qa</span> <span class="o">=</span> <span class="n">image</span><span class="p">.</span><span class="k">select</span><span class="p">(</span><span class="s1">&#39;QA60&#39;</span><span class="p">);</span>
 
   <span class="o">//</span> <span class="n">Bits</span> <span class="mi">10</span> <span class="k">and</span> <span class="mi">11</span> <span class="k">are</span> <span class="n">clouds</span> <span class="k">and</span> <span class="n">cirrus</span><span class="p">,</span> <span class="n">respectively</span><span class="p">.</span>
@@ -107,11 +107,11 @@ title: 基于GEE计算Sentinel-2多年NDVI
 
   <span class="k">return</span> <span class="n">image</span><span class="p">.</span><span class="n">updateMask</span><span class="p">(</span><span class="n">mask</span><span class="p">).</span><span class="n">divide</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
 <span class="err">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2>附 完整代码：</h2>
-<div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">maskS2clouds</span><span class="p">(</span><span class="n">image</span><span class="p">)</span> <span class="err">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">function</span> <span class="n">maskS2clouds</span><span class="p">(</span><span class="n">image</span><span class="p">)</span> <span class="err">{</span>
   <span class="n">var</span> <span class="n">qa</span> <span class="o">=</span> <span class="n">image</span><span class="p">.</span><span class="k">select</span><span class="p">(</span><span class="s1">&#39;QA60&#39;</span><span class="p">);</span>
 
   <span class="o">//</span> <span class="n">Bits</span> <span class="mi">10</span> <span class="k">and</span> <span class="mi">11</span> <span class="k">are</span> <span class="n">clouds</span> <span class="k">and</span> <span class="n">cirrus</span><span class="p">,</span> <span class="n">respectively</span><span class="p">.</span>
@@ -136,7 +136,7 @@ title: 基于GEE计算Sentinel-2多年NDVI
         <span class="p">.</span><span class="k">select</span><span class="p">(</span><span class="ss">&quot;NDVI&quot;</span><span class="p">)</span>
          <span class="p">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">ee</span><span class="p">.</span><span class="n">Reducer</span><span class="p">.</span><span class="k">max</span><span class="p">())</span>
         <span class="p">.</span><span class="n">aside</span><span class="p">(</span><span class="n">print</span><span class="p">);</span>
-</pre></div>
+</code></pre></div>
     </div><!-- /.entry-content -->
 
   </article>
