@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>How to deploy your github page with python pelican?</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="/theme/css/code_blocks/github.css" rel="stylesheet">
+
+    <!-- CSS specified by the user -->
+    <link href="/assets/css/myblog.css" type="text/css" rel="stylesheet" />
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="/2020/05/how-to-deploy-your-github-page-with-python-pelican.html" rel="canonical" />
+
+        <meta name="description" content="Steps: pip install pelican Markdown mkdir YOUR_PAGE_DIR & cd YOUR_PAGE_DIR pelican-quickstart write a markdown page in ./content, e.g.:...">
+
+        <meta name="author" content="Zutrinken">
+
+
+        <meta property="og:locale" content="" />
+    <meta property="og:site_name" content="Attila Demo" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Attila Demo" />
+    <meta property="og:description" content="Blog description here." />
+    <meta property="og:url" content="" />
+      <meta name="og:image" content="/theme/images/post-bg.jpg">
+      <meta property="article:publisher" content="http://facebook.com/arulraj.net" />
+
+  <meta property="og:type" content="article">
+            <meta property="article:author" content="/author/zutrinken">
+  <meta property="og:url" content="/2020/05/how-to-deploy-your-github-page-with-python-pelican.html">
+  <meta property="og:title" content="How to deploy your github page with python pelican?">
+  <meta property="article:published_time" content="2020-05-05 17:00:00+05:30">
+            <meta property="og:description" content="Steps: pip install pelican Markdown mkdir YOUR_PAGE_DIR & cd YOUR_PAGE_DIR pelican-quickstart write a markdown page in ./content, e.g.:...">
+
+            <meta property="og:image" content="/theme/images/post-bg.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@arulrajnet">
+        <meta name="twitter:title" content="How to deploy your github page with python pelican?">
+        <meta name="twitter:url" content="/2020/05/how-to-deploy-your-github-page-with-python-pelican.html">
+
+            <meta name="twitter:image:src" content="/theme/images/post-bg.jpg">
+
+            <meta name="twitter:description" content="Steps: pip install pelican Markdown mkdir YOUR_PAGE_DIR & cd YOUR_PAGE_DIR pelican-quickstart write a markdown page in ./content, e.g.:...">
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">How to deploy your github page with python pelican?</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="/author/zutrinken">Zutrinken</a>
+            | <time datetime="05 May 2020">05 May 2020</time>
+        </span>
+        <!-- TODO : Modified check -->
+        
+            <div class="post-cover cover" style="background-image: url('/theme/images/post-bg.jpg')">
+        
+      </div>
+    </header>    
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <h2>Steps:</h2>
+<ol>
+<li><code>pip install pelican Markdown</code></li>
+<li><code>mkdir YOUR_PAGE_DIR</code> &amp; <code>cd YOUR_PAGE_DIR</code></li>
+<li><code>pelican-quickstart</code></li>
+<li>write a markdown page in <code>./content</code>, e.g.:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="n">First</span> <span class="n">Review</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2010</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">03</span> <span class="mi">10</span><span class="o">:</span><span class="mi">20</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">Review</span>
+
+<span class="n">Following</span> <span class="k">is</span> <span class="n">a</span> <span class="n">review</span> <span class="n">of</span> <span class="n">my</span> <span class="n">favorite</span> <span class="n">mechanical</span> <span class="n">keyboard</span><span class="o">.</span>
+</code></pre></div>
+
+
+<ol>
+<li><code>pelican content</code></li>
+<li><code>cd output</code></li>
+<li><code>python -m pelican.server</code></li>
+<li>preview the page at localhost:8000</li>
+<li>pull your github page repository (<code>YOUR_GITHUB_NAME.github.io</code>), replace files inside with those in <code>./output</code></li>
+<li>push and view your page. </li>
+</ol>
+<h2>A simpler way</h2>
+<ol>
+<li>Write your blog within ./content, naming the .md file as "yyyy_mm_dd.md".</li>
+<li>Must included are <em>Title</em>, <em>Date</em>, and <em>Category</em>.</li>
+<li>Key in <code>pelican content</code> command in terminal.</li>
+<li>Copy &amp; paste all from ./output to your github page folder.</li>
+</ol>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=How to deploy your github page with python pelican?&amp;url=/2020/05/how-to-deploy-your-github-page-with-python-pelican.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2020/05/how-to-deploy-your-github-page-with-python-pelican.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=/2020/05/how-to-deploy-your-github-page-with-python-pelican.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="clear"></div>
+
+                <aside class="post-author">
+                        <figure class="post-author-avatar">
+                            <img src="assets/images/avatar.png" alt="Zutrinken" />
+                        </figure>
+                    <div class="post-author-bio">
+                        <h4 class="post-author-name"><a href="/author/zutrinken">Zutrinken</a></h4>
+                            <p class="post-author-about">This is the place for a small biography with max 200 characters. Well, now 100 are left. Cool, hugh?</p>
+                            <span class="post-author-location"><i class="ic ic-location"></i> Chennai</span>
+                            <span class="post-author-website"><a href="http://blog.arulraj.net"><i class="ic ic-link"></i> Website</a></span>
+                    </div>
+                    <div class="clear"></div>
+                </aside>
+ 
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+  
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="/theme/js/script.js"></script>
+  
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3546274-12']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'attilademo';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>

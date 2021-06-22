@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Tutorial for Python CHO package for formaldehyde and glyoxal retrievals</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="/theme/css/code_blocks/github.css" rel="stylesheet">
+
+    <!-- CSS specified by the user -->
+    <link href="/assets/css/myblog.css" type="text/css" rel="stylesheet" />
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="/2020/07/tutorial-for-python-cho-package-for-formaldehyde-and-glyoxal-retrievals.html" rel="canonical" />
+
+        <meta name="description" content="CHO使用教程 Date: Jun 28th 2020 Author: sz394@exeter.ac.uk 简介 CHO是一个哨兵5P甲醛乙二醛数据下载、DOAS反演以及生成JPG柱浓度分布图的Python包。 CHO下载安装...">
+
+        <meta name="author" content="Zutrinken">
+
+
+        <meta property="og:locale" content="" />
+    <meta property="og:site_name" content="Attila Demo" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Attila Demo" />
+    <meta property="og:description" content="Blog description here." />
+    <meta property="og:url" content="" />
+      <meta name="og:image" content="/theme/images/post-bg.jpg">
+      <meta property="article:publisher" content="http://facebook.com/arulraj.net" />
+
+  <meta property="og:type" content="article">
+            <meta property="article:author" content="/author/zutrinken">
+  <meta property="og:url" content="/2020/07/tutorial-for-python-cho-package-for-formaldehyde-and-glyoxal-retrievals.html">
+  <meta property="og:title" content="Tutorial for Python CHO package for formaldehyde and glyoxal retrievals">
+  <meta property="article:published_time" content="2020-07-01 23:13:00+05:30">
+            <meta property="og:description" content="CHO使用教程 Date: Jun 28th 2020 Author: sz394@exeter.ac.uk 简介 CHO是一个哨兵5P甲醛乙二醛数据下载、DOAS反演以及生成JPG柱浓度分布图的Python包。 CHO下载安装...">
+
+            <meta property="og:image" content="/theme/images/post-bg.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@arulrajnet">
+        <meta name="twitter:title" content="Tutorial for Python CHO package for formaldehyde and glyoxal retrievals">
+        <meta name="twitter:url" content="/2020/07/tutorial-for-python-cho-package-for-formaldehyde-and-glyoxal-retrievals.html">
+
+            <meta name="twitter:image:src" content="/theme/images/post-bg.jpg">
+
+            <meta name="twitter:description" content="CHO使用教程 Date: Jun 28th 2020 Author: sz394@exeter.ac.uk 简介 CHO是一个哨兵5P甲醛乙二醛数据下载、DOAS反演以及生成JPG柱浓度分布图的Python包。 CHO下载安装...">
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Tutorial for Python CHO package for formaldehyde and glyoxal retrievals</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="/author/zutrinken">Zutrinken</a>
+            | <time datetime="01 Jul 2020">01 Jul 2020</time>
+        </span>
+        <!-- TODO : Modified check -->
+        
+            <div class="post-cover cover" style="background-image: url('/theme/images/post-bg.jpg')">
+        
+      </div>
+    </header>    
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <h1>CHO使用教程</h1>
+<blockquote>
+<p>Date: Jun 28th 2020
+Author: sz394@exeter.ac.uk</p>
+</blockquote>
+<h2>简介</h2>
+<p>CHO是一个哨兵5P甲醛乙二醛数据下载、DOAS反演以及生成JPG柱浓度分布图的Python包。</p>
+<h2>CHO下载安装</h2>
+<p>CHO需要Python环境，推荐使用Anaconda（<a href="https://repo.anaconda.com/archive/Anaconda3-2020.02-Windows-x86_64.exe">链接</a>）。Anaconda通过逐步点击下一步方式“傻瓜”安装（需要注意的是安装时需要确定覆盖环境变量，<a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fmedium.com%2F%40GalarnykMichael%2Finstall-python-on-windows-anaconda-c63c7c3d1444&amp;psig=AOvVaw0TQxaz_-w94dZCl7nKCExh&amp;ust=1593458933548000&amp;source=images&amp;cd=vfe&amp;ved=0CAIQjRxqFwoTCPjU45-fpeoCFQAAAAAdAAAAABAD">见图</a>）。</p>
+<p>CHO依赖库：
+- os
+- sys
+- sentinelsat
+- datetime
+- pathlib
+- pickle
+- numpy
+- xarray
+- netCDF4
+- scipy
+- matplotlib
+- shapely</p>
+<p>其中大多数依赖库已经集成在Anaconda环境中，netCDF4和shapely需要通过如下方式安装：
+1. 打开命令行cmd（管理员方式）
+2. 键入:<code>pip install netCDF4</code>
+3. 键入:<code>pip install shapely</code></p>
+<p>下载whl格式的CHO包，通过如下方式安装：
+1. 打开命令行cmd（管理员方式）
+2. 通过cd命令切换到CHO所在路径
+3. 键入:<code>pip install cho-0.0.3-py3-none-any.whl</code></p>
+<h2>CHO使用</h2>
+<ol>
+<li>通过新建python脚本或者终端cmd环境下引入CHO包。
+例如cmd环境下：</li>
+<li>打开命令行cmd（管理员方式）</li>
+<li>通过cd切换到工作空间所在路径</li>
+<li>依次键入</li>
+<li><code>activate base</code></li>
+<li><code>python</code></li>
+<li><code>from cho import *</code></li>
+</ol>
+<h4>下载甲醛二级产品</h4>
+<ol>
+<li>在工作空间下新建roi.geojson文件，文件内容为感兴趣区的geojson矢量，例如浙江省。</li>
+<li>在终端中键入：<code>retrieve_hcho(['20190101','20190131'], download_folder = "data/hcho")</code>，其中'20190101'和'20190131'是起止日期，"data/hcho"是下载子路径，可自行更改。</li>
+</ol>
+<h4>下载光谱数据并自动反演乙二醛</h4>
+<p>在终端中键入:
+1. <code>pacific = pacific_radiance(['20190101','20190102'], download_folder = "data/pacific")</code>
+2. <code>chocho_inversion(['20190101','20190102'], pacific, download_folder = "data/radiance")</code>
+关键参数含义同甲醛部分，反演结果在data子路径下，文件命名为<code>&lt;光谱文件名&gt;_chocho.pkl</code>, 例如<code>S5P_OFFL_L1B_RA_BD4_20190101T031859_20190101T050029_06310_01_010000_20190101T064421_chocho.pkl</code>。</p>
+<h4>甲醛数据出图</h4>
+<p>在终端中键入:
+1. <code>filename = r"C:\workspace\cho\playground\data\S5P_OFFL_L2__HCHO___20190129T061803_20190129T075934_06709_01_010105_20190204T082717.nc</code>
+2. <code>coors, values = load_hcho_level2(filename)</code>
+3. <code>grid, lons, lats = point2grid(coors, values, r = 1)</code>
+4. <code>grid2fig(grid, lons, lats, clabel = "formaldehyde (mol m-2)", savefile = "data/hcho.jpg")</code></p>
+<p>其中，filename为甲醛耳机产品全路径，r为格网化的空间分辨率，单位为度（°），一般可使r = 0.075， savefile为图片保存全路径。</p>
+<h4>乙二醛数据出图</h4>
+<p>在终端中键入:
+1. <code>filename = r"C:\workspace\cho\cho\data\S5P_OFFL_L1B_RA_BD4_20190101T031859_20190101T050029_06310_01_010000_20190101T064421_chocho.pkl</code>
+2. <code>coors, values = load_chocho(filename)</code>
+3. <code>grid, lons, lats = point2grid(coors, values, r = 1)</code>
+4. <code>grid2fig(grid, lons, lats, clabel = "glyoxal (mol m-2)", savefile = "data/glyoxal.jpg")</code></p>
+<p>参数含义同甲醛出图。</p>
+<hr>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Tutorial for Python CHO package for formaldehyde and glyoxal retrievals&amp;url=/2020/07/tutorial-for-python-cho-package-for-formaldehyde-and-glyoxal-retrievals.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2020/07/tutorial-for-python-cho-package-for-formaldehyde-and-glyoxal-retrievals.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=/2020/07/tutorial-for-python-cho-package-for-formaldehyde-and-glyoxal-retrievals.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="clear"></div>
+
+                <aside class="post-author">
+                        <figure class="post-author-avatar">
+                            <img src="assets/images/avatar.png" alt="Zutrinken" />
+                        </figure>
+                    <div class="post-author-bio">
+                        <h4 class="post-author-name"><a href="/author/zutrinken">Zutrinken</a></h4>
+                            <p class="post-author-about">This is the place for a small biography with max 200 characters. Well, now 100 are left. Cool, hugh?</p>
+                            <span class="post-author-location"><i class="ic ic-location"></i> Chennai</span>
+                            <span class="post-author-website"><a href="http://blog.arulraj.net"><i class="ic ic-link"></i> Website</a></span>
+                    </div>
+                    <div class="clear"></div>
+                </aside>
+ 
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+  
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="/theme/js/script.js"></script>
+  
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3546274-12']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'attilademo';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
