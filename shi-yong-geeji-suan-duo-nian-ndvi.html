@@ -1,130 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>使用GEE计算多年NDVI</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="zhusy93@gmail.com">
+<html class="no-js" lang="en">
 
-    <!-- Le styles -->
-    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-      .tag-1 {
-        font-size: 13pt;
-      }
-      .tag-2 {
-        font-size: 10pt;
-      }
-      .tag-2 {
-        font-size: 8pt;
-      }
-      .tag-4 {
-        font-size: 6pt;
-     }
-    </style>
-    <link href="/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link href="/theme/css/font-awesome.css" rel="stylesheet">
+<head>
+    <title>Songyan Zhu, Ph.D. student @ University of Exeter</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" id="responsive-style-css"  href='/theme/css/style.css' type="text/css" media="all" />
+    <link rel="stylesheet" id="responsive-style-css"  href='/theme/css/highlight.css' type="text/css" media="all" />
+    
+</head>
 
-    <link href="/theme/css/pygments.css" rel="stylesheet">
+<body id="index" class="blog">
+<div id="container" class="hfeed">
+    <header id="header" >
+        <div id="logo">
+                <h1><img src="/theme/image/default-logo.png" width="300" height="100" alt="小铱的故事" />
+                Songyan Zhu, Ph.D. student @ University of Exeter</h1>
+        </div> <!-- /#logo-->
+        <nav id="menu" class="main-nav"><ul class="menu">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        </ul></nav><!-- /#menu -->
+    </header>
+    <section id="wrapper" class="clearfix">
+        <section id="content" class="grid col-620" >
+                <section class="breadcrumb-list">
+<a href="">Blog</a> ›<a href="category/zhong-wen.html">中文</a> ›使用GEE计算多年NDVI
+                </section>
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="/theme/images/favicon.ico">
-    <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png">
 
-    <link href="/" type="application/atom+xml" rel="alternate" title="Songyan Zhu, Ph.D. student @ University of Exeter ATOM Feed" />
-
-  </head>
-
-  <body>
-
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/index.html">Songyan Zhu, Ph.D. student @ University of Exeter </a>
-          <div class="nav-collapse">
-            <ul class="nav">
-                          <li class="divider-vertical"></li>
-                  <li >
-                    <a href="/category/language-learning.html">
-						<i class="icon-folder-open icon-large"></i>Language learning
-					</a>
-                  </li>
-                  <li >
-                    <a href="/category/scientific-blogs.html">
-						<i class="icon-folder-open icon-large"></i>Scientific blogs
-					</a>
-                  </li>
-                  <li >
-                    <a href="/category/tutorials.html">
-						<i class="icon-folder-open icon-large"></i>Tutorials
-					</a>
-                  </li>
-                  <li class="active">
-                    <a href="/category/zhong-wen.html">
-						<i class="icon-folder-open icon-large"></i>中文
-					</a>
-                  </li>
-
-                          <ul class="nav pull-right">
-                                <li><a href="/archives.html"><i class="icon-th-list"></i>Archives</a></li>
-                          </ul>
-
-            </ul>
-            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
+<section id="post" class="post hentry">
+    <header>
+    <h2 class="post-title" >使用GEE计算多年NDVI</h2>
+    
+    <div class="post-meta">
+        <span class="meta-prep">Post in</span>
+        <abbr class="date" title="2019-04-15T15:00:00+02:00"> 
+            <a href="/archive/2019/Apr/index.html">Mon 15 April 2019 </a>
+        </abbr>
+        <span class="meta-prep"> |Tags</span>
+        <!-- TOBE COMMENTS -->
     </div>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="span9" id="content">
-<section id="content">
-        <article>
-                <header>
-                        <h1>
-                                <a href=""
-                                        rel="bookmark"
-                                        title="Permalink to 使用GEE计算多年NDVI">
-                                        使用GEE计算多年NDVI
-                                </a>
-                        </h1>
-                </header>
-                <div class="entry-content">
-                <div class="well">
-<footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2019-04-15T15:00:00+02:00">
-        <i class="icon-calendar"></i>Mon 15 April 2019
-</abbr>
-<span class="label">By</span>
-<a href="/author/zhusy93gmailcom.html"><i class="icon-user"></i>zhusy93@gmail.com</a>
-<span class="label">Category</span>
-<a href="/category/zhong-wen.html"><i class="icon-folder-open"></i>中文</a>.
-
-
-</footer><!-- /.post-info -->                </div>
-                <!-- ---
+    </header>
+    <div class="post-entry">
+        <!-- ---
 title: 基于GEE计算Sentinel-2多年NDVI
 --- -->
 
@@ -226,69 +144,99 @@ title: 基于GEE计算Sentinel-2多年NDVI
          <span class="p">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">ee</span><span class="p">.</span><span class="n">Reducer</span><span class="p">.</span><span class="k">max</span><span class="p">())</span>
         <span class="p">.</span><span class="n">aside</span><span class="p">(</span><span class="n">print</span><span class="p">);</span>
 </code></pre></div>
-                </div><!-- /.entry-content -->
-        </article>
+    </div><!-- /.entry-content -->
+    <footer class="post-meta">
+        <span class="meta-prep">Category:</span>
+        <abbr class="category">
+            <a href="/category/zhong-wen.html">中文</a>
+        </abbr>
+    </footer>
+    <section id="respond">
+        <div id="disqus_thread">
+        <script type="text/javascript">
+        var disqus_identifier = "shi-yong-geeji-suan-duo-nian-ndvi.html";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        </div>
+
+    </section>
 </section>
-        </div><!--/span-->
-
-                <div class="span3 well sidebar-nav" id="sidebar">
-<ul class="nav nav-list">
-<li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
-    <li><a href="http://geography.exeter.ac.uk/staff/index.php?web_id=songyan_zhu"><i class="icon-external-link"></i>Bio</a></li>
-    <li><a href="http://blogs.exeter.ac.uk/timhill/people/"><i class="icon-external-link"></i>People</a></li>
-<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
-    <li><a href="https://github.com/soonyenju/"><i class="icon-GitHub-sign icon-large"></i>GitHub</a></li>
-    <li><a href="https://www.researchgate.net/profile/Songyan_Zhu"><i class="icon-My RG-sign icon-large"></i>My RG</a></li>
-    <li><a href="https://www.researchgate.net/profile/Jingya_Zeng2"><i class="icon-JZ RG-sign icon-large"></i>JZ RG</a></li>
-
-<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
-<li>
-<a href="/category/language-learning.html">
-    <i class="icon-folder-open icon-large"></i>Language learning
-</a>
-</li>
-<li>
-<a href="/category/scientific-blogs.html">
-    <i class="icon-folder-open icon-large"></i>Scientific blogs
-</a>
-</li>
-<li>
-<a href="/category/tutorials.html">
-    <i class="icon-folder-open icon-large"></i>Tutorials
-</a>
-</li>
-<li>
-<a href="/category/zhong-wen.html">
-    <i class="icon-folder-open icon-large"></i>中文
-</a>
-</li>
-
-<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
 
 
-</ul>        </div><!--/.well -->
+        </section><!-- #content -->
+        <section id="widgets" class="grid col-300 fit" >
+            <!--
+            <section id="widget-search" class="widget-wrapper widget_search">
 
-      </div><!--/row-->
+                <form id="searchform" action="http://www.google.com/search" method="get">
+                    <input id="q" class="field" type="text" placeholder="Search Blog" name="q" ></input>
+                    <input id="ie" name="ie" type="hidden" value="utf-8" ></input>
+                    <input id="oe" name="oe" type="hidden" value="utf-8" ></input>
+                    <input id="channel" name="channel" type="hidden" value="suggest" ></input>
+                    <input id="searchsubmit" class="submit" type="submit" value="">
+                </form>
+            </section>
+            -->
+            <section id="widget-category" class="widget-wrapper widget_archive">
+                <div class="widget-title">
+                    Category
+                </div>
+                <ul>
+                        <li><a href="/category/language-learning.html" >Language learning </a></li>
+                        <li><a href="/category/scientific-blogs.html" >Scientific blogs </a></li>
+                        <li><a href="/category/tutorials.html" >Tutorials </a></li>
+                        <li><a href="/category/zhong-wen.html" >中文 </a></li>
+                </ul>
+            </section>
 
-      <hr>
-
-      <footer>
-        <address id="about">
-                Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
-                                which takes great advantage of <a href="http://python.org">Python <i class="icon-external-link"></i></a>.
-        </address><!-- /#about -->
-
-        <p>The theme is from <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>,
-                   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
-      </footer>
-
-    </div><!--/.fluid-container-->
+            <section id="widget-tagcloud" class="widget-wrapper widget_archive">
+                <div class="widget-title">
+                    Tagcloud
+                </div>
+                <div>
+                </div>
+            </section>
 
 
+            <section id="widget-links" class="widget-wrapper widget_archive">
+                <div class="widget-title">
+                    Links
+                </div>
+                <ul>
+                        <li><a href="http://geography.exeter.ac.uk/staff/index.php?web_id=songyan_zhu">Bio</a></li>
+                        <li><a href="http://blogs.exeter.ac.uk/timhill/people/">People</a></li>
+                </ul>
+            </section>
+            
+        </section><!-- widgets -->
+    </section><!-- /#wrapper -->
+    <footer id="footer" class="clearfix"><section class="footer-wrapper">
+        <div class="grid col-940" >
+            <div class="grid col-540"></div>
+            <div class="grid col-380 fit" >
+                <ul class="social-icons">
+                    <!-- TO BE CONTINUED -->
+                </ul>
+            </div>
+        </div>
 
-    <!-- Le javascript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/theme/js/jquery-1.7.2.min.js"></script>
-    <script src="/theme/js/bootstrap.min.js"></script>
-  </body>
+        <div class="grid col-300 copyright" >
+            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license">
+                <img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" style="border-width:0" alt="知识共享许可协议"></img>
+            </a>
+        </div>
+        <div class="grid col-300 ">
+
+        </div>
+        <div class="grid col-300 fit powered">
+            Powered by <a href="http://getpelican.com/">Pelican</a> <br />
+            which takes great advantage of <a href="http://python.org">Python</a>
+        </div>
+    </section></footer>
+</div>
+</body>
 </html>
