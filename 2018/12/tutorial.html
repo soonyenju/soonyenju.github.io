@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Tutorial</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="/theme/css/code_blocks/github.css" rel="stylesheet">
+
+    <!-- CSS specified by the user -->
+    <link href="/assets/css/myblog.css" type="text/css" rel="stylesheet" />
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="/2018/12/tutorial.html" rel="canonical" />
+
+        <meta name="description" content="目录 [TOC] npm更新 回到页首 npm -v npm install -g npm 更新到指定版本 npm -g install npm@2.9.1 因为国内的网络环境原因，在下载npm包的时候经常会遇到无法正常下载的情况。国内淘宝推出了 npm...">
+
+        <meta name="author" content="zhusy93@gmail.com">
+
+
+        <meta property="og:locale" content="" />
+    <meta property="og:site_name" content="Atmosphere, ecosystems, Python" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Atmosphere, ecosystems, Python" />
+    <meta property="og:description" content="Songyan Zhu, Ph.D. student @ University of Exeter" />
+    <meta property="og:url" content="" />
+      <meta name="og:image" content="/theme/images/post-bg.jpg">
+      <meta property="article:publisher" content="http://facebook.com/arulraj.net" />
+
+  <meta property="og:type" content="article">
+            <meta property="article:author" content="/author/zhusy93gmailcom">
+  <meta property="og:url" content="/2018/12/tutorial.html">
+  <meta property="og:title" content="Tutorial">
+  <meta property="article:published_time" content="2018-12-31 08:00:00+00:00">
+            <meta property="og:description" content="目录 [TOC] npm更新 回到页首 npm -v npm install -g npm 更新到指定版本 npm -g install npm@2.9.1 因为国内的网络环境原因，在下载npm包的时候经常会遇到无法正常下载的情况。国内淘宝推出了 npm...">
+
+            <meta property="og:image" content="/theme/images/post-bg.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@arulrajnet">
+        <meta name="twitter:title" content="Tutorial">
+        <meta name="twitter:url" content="/2018/12/tutorial.html">
+
+            <meta name="twitter:image:src" content="/theme/images/post-bg.jpg">
+
+            <meta name="twitter:description" content="目录 [TOC] npm更新 回到页首 npm -v npm install -g npm 更新到指定版本 npm -g install npm@2.9.1 因为国内的网络环境原因，在下载npm包的时候经常会遇到无法正常下载的情况。国内淘宝推出了 npm...">
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Tutorial</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="/author/zhusy93gmailcom">Zhusy93@gmail.com</a>
+            | <time datetime="31 Dec 2018">31 Dec 2018</time>
+        </span>
+        <!-- TODO : Modified check -->
+        
+            <div class="post-cover cover" style="background-image: url('/theme/images/post-bg.jpg')">
+        
+      </div>
+    </header>    
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <h1>目录</h1>
+<p>[TOC]</p>
+<hr>
+<h1>npm更新</h1>
+<p><a href="#目录">回到页首</a></p>
+<div class="highlight"><pre><span></span><code><span class="err">npm -v</span>
+<span class="err">npm install -g npm</span>
+</code></pre></div>
+
+
+<p>更新到指定版本</p>
+<div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="o">-</span><span class="n">g</span> <span class="n">install</span> <span class="n">npm</span><span class="mf">@2.9.1</span>
+</code></pre></div>
+
+
+<p>因为国内的网络环境原因，在下载npm包的时候经常会遇到无法正常下载的情况。国内淘宝推出了 npm 镜像，这是一个完整的 npmjs.org 镜像，同步频率为15分钟一次，保证与官方服务同步。推荐使用该镜像。使用方法如下：</p>
+<div class="highlight"><pre><span></span><code><span class="err">npm install -g cnpm --registry=http://registry.npm.taobao.org</span>
+</code></pre></div>
+
+
+<p>之后所有用到的 npm 命令都可以使用 cnpm 来代替进行 install。但是 cnpm 不支持 publish 命令，需要注意。</p>
+<h1>node更新</h1>
+<p><a href="#目录">回到页首</a></p>
+<p>查看node版本，没安装的请先安装：</p>
+<div class="highlight"><pre><span></span><code><span class="err">node -v</span>
+</code></pre></div>
+
+
+<p>清除node缓存：</p>
+<div class="highlight"><pre><span></span><code><span class="err">sudo npm cache clean -f  </span>
+</code></pre></div>
+
+
+<p>安装node版本管理工具'n'：</p>
+<div class="highlight"><pre><span></span><code><span class="err">sudo npm install n -g</span>
+</code></pre></div>
+
+
+<p>使用版本管理工具安装指定node或者升级到最新node版本：</p>
+<div class="highlight"><pre><span></span><code><span class="err">sudo n stable</span>
+</code></pre></div>
+
+
+<p>安装node指定版本，如8.9.4：</p>
+<div class="highlight"><pre><span></span><code><span class="err">sudo n 8.9.4</span>
+</code></pre></div>
+
+
+<h1>Anaconda升级</h1>
+<p><a href="#目录">回到页首</a></p>
+<blockquote>
+<p>command需要为管理员</p>
+</blockquote>
+<p>step1：升级conda(升级Anaconda前需要先升级conda)命令为：</p>
+<div class="highlight"><pre><span></span><code><span class="err">conda update conda </span>
+</code></pre></div>
+
+
+<p>step2：升级anconda命令为：</p>
+<div class="highlight"><pre><span></span><code><span class="err">conda update anconda</span>
+</code></pre></div>
+
+
+<h1>pip/conda使用清华源</h1>
+<p><a href="#目录">回到页首</a></p>
+<ol>
+<li><strong>pip设置</strong></li>
+</ol>
+<blockquote>
+<p>pypi 镜像每 5 分钟同步一次。</p>
+</blockquote>
+<p><strong>临时使用</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="err">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span>
+</code></pre></div>
+
+
+<p><strong>设为默认</strong>
+升级 pip 到最新的版本 (&gt;=10.0.0) 后进行配置：</p>
+<div class="highlight"><pre><span></span><code><span class="err">pip install pip -U</span>
+<span class="err">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span>
+</code></pre></div>
+
+
+<ol>
+<li><strong>Conda设置</strong></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">conda</span> <span class="n">config</span> <span class="c1">--add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span>
+
+<span class="n">conda</span> <span class="n">config</span> <span class="c1">--set show_channel_urls yes</span>
+</code></pre></div>
+
+
+<h1>conda 删除清华源</h1>
+<p><a href="#目录">回到页首</a></p>
+<p>conda config命令</p>
+<div class="highlight"><pre><span></span><code><span class="n">conda</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="c1">--get 显示所有的配置</span>
+<span class="n">conda</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="c1">--get [key1] [key2] 显示指定配置</span>
+<span class="n">conda</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="c1">--add [key] [value] 添加新配置</span>
+<span class="n">conda</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="c1">--set [key] [value] 设置配置</span>
+<span class="n">conda</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="c1">--remove [key] [value] 删除一个配置</span>
+<span class="n">conda</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="c1">--remove-key [key] 删除一个key</span>
+</code></pre></div>
+
+
+<p>查看命令列表</p>
+<div class="highlight"><pre><span></span><code><span class="err">conda config --help</span>
+</code></pre></div>
+
+
+<p>删除清华源</p>
+<div class="highlight"><pre><span></span><code><span class="err">conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span>
+</code></pre></div>
+
+
+<h1>Flask+react+typescript</h1>
+<p><a href="#目录">回到页首</a></p>
+<p><a href="https://www.jianshu.com/p/b348926fa628">Flask + react开发教程</a>
+1. 下载create-react-app
+ ```
+npm install -g create-react-app</p>
+<div class="highlight"><pre><span></span><code><span class="err">2. 创建工程</span>
+</code></pre></div>
+
+
+<p>create-react-app my-app --scripts-version=react-scripts-ts</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">react中使用typescript</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">css88</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">typescript</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">handbook</span><span class="o">/</span><span class="n">tutorials</span><span class="o">/</span><span class="n">React</span><span class="p">.</span><span class="n">html</span><span class="p">)</span>
+
+<span class="c1"># Jupyter教程</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="c1">#目录)</span>
+
+<span class="ss">`Jupyter下载`</span><span class="p">:</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span>
+
+<span class="ss">`Jupyter使用`</span><span class="p">:</span> <span class="n">jupyer</span> <span class="nf">notebook</span> <span class="p">(</span><span class="n">command</span> <span class="n">line</span><span class="p">)</span>
+
+<span class="ss">`Jupyter Lab安装`</span><span class="p">:</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">jupyterlab</span>
+
+<span class="ss">`运行`</span><span class="p">:</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">lab</span>
+
+<span class="c1"># pip发布</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="c1">#目录)</span>
+
+<span class="o">**</span><span class="n">steps</span><span class="p">:</span><span class="o">**</span>
+
+<span class="o">**</span><span class="mi">0</span><span class="p">.</span> <span class="err">包内建立</span><span class="ss">`requiremes.txt`</span><span class="p">:</span><span class="o">**</span>
+  <span class="o">*</span> <span class="err">安装</span><span class="n">pipreq</span><span class="err">：</span>
+  <span class="ss">```</span>
+<span class="ss">  pip install pipreqs</span>
+<span class="ss">  ```</span>
+  <span class="o">*</span> <span class="err">生成</span><span class="ss">`requiremes.txt`</span><span class="p">:</span>
+  <span class="ss">```</span>
+<span class="ss">  pipreqs ./  # pipreqs ./ --force 如果已经生成requirement.txt</span>
+<span class="ss">  ```</span>
+  <span class="o">*</span> <span class="n">ps</span> <span class="err">用户可以通过</span><span class="ss">`requiremes.txt`</span><span class="err">手动安装依赖项：</span>
+  <span class="ss">```</span>
+<span class="ss">  pip install -r requirements.txt</span>
+<span class="ss">  ```</span>
+  <span class="err">或</span>
+  <span class="ss">```</span>
+<span class="ss">  conda install --yes --file requirements.txt</span>
+<span class="ss">  ```</span>
+<span class="o">**</span><span class="mi">1</span><span class="p">.</span> <span class="err">在</span><span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">User</span><span class="o">/</span><span class="n">Soony</span> <span class="err">下创建</span><span class="p">.</span><span class="n">pypirc文件</span><span class="p">,</span><span class="err">在</span><span class="n">Winodws下需这么命名</span><span class="s2">&quot;.pypirc.&quot;</span>
+<span class="err">内容：</span><span class="o">**</span>
+</code></pre></div>
+
+
+<p>[distutils]
+index-servers=pypi</p>
+<p>[pypi]
+repository = https://upload.pypi.org/legacy/
+username: SoonyenJu
+password: Soon214136</p>
+<div class="highlight"><pre><span></span><code><span class="o">**</span><span class="mi">2</span><span class="p">.</span> <span class="err">建立</span><span class="n">setup</span><span class="p">.</span><span class="n">py文件</span><span class="o">**</span>
+
+<span class="o">**</span><span class="mi">3</span><span class="p">.</span> <span class="err">建立</span><span class="n">build文件夹</span><span class="err">：</span><span class="o">**</span>
+</code></pre></div>
+
+
+<p>python setup.py sdist bdist_wheel</p>
+<div class="highlight"><pre><span></span><code><span class="err">**4.  用twine安全上传到pip:**</span>
+</code></pre></div>
+
+
+<p>twine upload --repository-url https://upload.pypi.org/legacy/ dist/*</p>
+<div class="highlight"><pre><span></span><code><span class="err">**注意**</span>
+<span class="err">目录结构：</span>
+</code></pre></div>
+
+
+<p>-pysy
+--setup.py
+--pysy
+---scigeo.py
+---<strong>init</strong>.py
+--build
+--dist</p>
+<div class="highlight"><pre><span></span><code><span class="err">**setup.py文件示例：**</span>
+</code></pre></div>
+
+
+<h1>!/usr/bin/env python</h1>
+<h1>-<em>- coding:utf-8 -</em>-</h1>
+<h6></h6>
+<h1>File Name: setup.py</h1>
+<h1>Author: soonyenju</h1>
+<h1>Mail: soonyenju@foxmail.com</h1>
+<h1>Created Time:  2018-10-23 13:28:34</h1>
+<h6></h6>
+<p>from setuptools import setup, find_packages</p>
+<p>setup(
+    name = "pysy",
+    version = "0.0.5",
+    keywords = ("pip", "geo-processing","GDAL", "raster-file", "shapefile", "soonyenju"),
+    description = "For faster proccessing geofile",
+    long_description = "Read/write and process rs/gis related data, especially atmospheric rs data.",
+    license = "MIT Licence",</p>
+<div class="highlight"><pre><span></span><code><span class="n">url</span><span class="o">=</span><span class="ss">&quot;https://github.com/soonyenju/pysy&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="n">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;soonyenju&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="n">author_email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;soonyenju@foxmail.com&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="n">packages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">find_packages</span><span class="p">(),</span><span class="w"></span>
+<span class="n">include_package_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span><span class="p">,</span><span class="w"></span>
+<span class="n">platforms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;any&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="n">install_requires</span><span class="o">=[</span><span class="n"></span>
+<span class="n">        &#39;python_hdf4 == 0.9&#39;,</span>
+<span class="n">        &#39;numpy == 1.14.2&#39;,</span>
+<span class="n">        &#39;pandas == 0.20.1&#39;,</span>
+<span class="n">        &#39;GDAL == 2.2.4&#39;,</span>
+<span class="n">        &#39;pyproj == 1.9.5.1&#39;,</span>
+<span class="n">        &#39;PySAL == 1.14.3&#39;,</span>
+<span class="n">        &#39;h5py == 2.8.0rc1&#39;,</span>
+<span class="n">        &#39;scipy == 0.19.0&#39;,</span>
+<span class="n">        &#39;netCDF4 == 1.4.2&#39;,</span>
+<span class="n">        &#39;osr == 0.0.1&#39;</span>
+<span class="o">]</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>)</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Typescript的REPL安装及TS自动转译工程</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="c1">#目录)</span>
+<span class="mi">1</span><span class="p">.</span> <span class="n">TS的REPL安装</span>
+<span class="o">*</span> <span class="err">先安装</span><span class="n">Typescript</span><span class="p">:</span>
+<span class="ss">`npm install -g typescript`</span>
+<span class="o">*</span> <span class="err">在安装</span><span class="n">tsun</span><span class="p">:</span>
+<span class="ss">`sudo npm install -g tsun`</span>
+<span class="o">*</span> <span class="err">打开</span><span class="n">tsun</span><span class="p">:</span>
+<span class="ss">`tsun`</span>
+
+<span class="mi">2</span><span class="p">.</span> <span class="n">TS自动转译</span>
+<span class="o">*</span> <span class="err">建立</span><span class="n">TS工程</span><span class="p">:</span>
+<span class="ss">`tsc --init`</span>
+<span class="err">自动创建</span><span class="n">tscong</span><span class="p">.</span><span class="n">json配置文件</span>
+<span class="o">*</span> <span class="err">配置：</span><span class="n">command</span><span class="o">+</span><span class="n">shift</span><span class="o">+</span><span class="n">p</span><span class="p">,</span> <span class="err">键入</span> <span class="n">configure</span> <span class="n">task</span>
+<span class="o">*</span> <span class="err">选择</span><span class="n">tsconfig</span><span class="p">.</span><span class="n">json</span> <span class="err">或</span> <span class="n">watch</span> <span class="nf">mode</span> <span class="p">(</span><span class="n">watch</span> <span class="n">mode</span> <span class="err">可以实时转译</span><span class="n">ts文件到js</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">command</span> <span class="o">+</span> <span class="n">shift</span> <span class="o">+</span> <span class="n">b</span> <span class="err">进行监视</span>
+
+<span class="mi">3</span><span class="p">.</span> <span class="err">安装</span><span class="n">TS下的jQuery类型</span>
+<span class="o">*</span> <span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">save</span> <span class="o">@</span><span class="n">types</span><span class="o">/</span><span class="n">jquery</span>
+<span class="o">*</span> <span class="o">*</span> <span class="err">\</span><span class="o">*</span><span class="p">.</span><span class="n">d</span><span class="p">.</span><span class="n">ts</span> <span class="err">表示</span><span class="n">TS中类型定义扩展</span>
+<span class="o">*</span> <span class="o">*</span> <span class="p">[</span><span class="err">查找</span><span class="n">Type类型</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">microsoft</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">TypeSearch</span><span class="o">/</span><span class="p">)</span>
+
+<span class="c1"># Visual Studio Code settings.json并且关闭pylint</span>
+<span class="mi">1</span><span class="p">.</span> <span class="ss">`CTRL`</span><span class="o">+</span><span class="ss">`Shift`</span><span class="o">+</span> <span class="ss">`p`</span>
+<span class="mi">2</span><span class="p">.</span> <span class="err">输入</span><span class="n">Preferences</span><span class="p">:</span> <span class="n">Open</span> <span class="n">User</span> <span class="n">Settings或Preferences</span><span class="p">:</span> <span class="n">Open</span> <span class="n">Workspace</span> <span class="n">Settings</span>
+<span class="mi">3</span><span class="p">.</span> <span class="err">右边栏内添加一行：</span>
+<span class="ss">`&quot;python.linting.enabled&quot;: false`</span>
+
+<span class="c1"># pip的卸载或升级issue解决方法</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="c1">#目录)</span>
+
+<span class="o">**</span><span class="n">pip无法卸载</span><span class="o">/</span><span class="err">升级</span><span class="n">pacakage</span><span class="o">**</span>
+
+<span class="ss">`Issue`</span><span class="p">:</span> <span class="n">It</span> <span class="k">is</span> <span class="n">a</span> <span class="n">distutils</span> <span class="n">installed</span> <span class="n">project</span> <span class="k">and</span> <span class="n">thus</span> <span class="n">we</span> <span class="n">cannot</span> <span class="n">accurately</span> <span class="n">determine</span> <span class="n">which</span> <span class="n">files</span> <span class="n">belong</span> <span class="k">to</span> <span class="n">it</span> <span class="n">which</span> <span class="n">would</span> <span class="n">lead</span> <span class="k">to</span> <span class="n">only</span> <span class="n">a</span> <span class="n">partial</span> <span class="n">uninstall</span><span class="p">.</span>
+
+<span class="ss">`解决方法`</span>
+<span class="o">*</span> <span class="n">Reduced</span> <span class="n">version</span><span class="p">,</span>
+
+<span class="ss">`pip install --upgrade --force-reinstall pip==9.0.3`</span>
+<span class="o">*</span> <span class="n">Tried</span> <span class="k">to</span> <span class="n">re</span><span class="o">-</span><span class="n">install</span> <span class="n">package</span>
+
+<span class="ss">`pip install xxx --disable-pip-version-check`</span>
+<span class="o">*</span> <span class="n">At</span> <span class="n">last</span><span class="p">,</span> <span class="n">recover</span> <span class="n">the</span> <span class="n">latest</span> <span class="n">version</span> <span class="k">for</span> <span class="n">pip</span>
+
+<span class="ss">`pip install --upgrade pip`</span>
+
+<span class="c1"># Python对象转Dict方法</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="c1">#目录)</span>
+
+<span class="o">*</span> <span class="err">方法</span><span class="mi">1</span>
+</code></pre></div>
+
+
+<p>class A(object):
+    name = 'wukt'
+    age = 18</p>
+<div class="highlight"><pre><span></span><code><span class="err">def __init__(self):</span>
+<span class="err">    self.gender = &#39;male&#39;</span>
+</code></pre></div>
+
+
+<p>a = A()
+print(a.<strong>dict</strong>)</p>
+<div class="highlight"><pre><span></span><code><span class="err">缺点：但是类变量name和age无法一同转换.</span>
+<span class="err">* 方法2</span>
+</code></pre></div>
+
+
+<p>class A(object):
+    name = 'wukt'
+    age = 18</p>
+<div class="highlight"><pre><span></span><code><span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+    <span class="k">self</span><span class="p">.</span><span class="n">gender</span> <span class="o">=</span> <span class="s1">&#39;male&#39;</span>
+
+<span class="n">def</span> <span class="n">keys</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+    <span class="s1">&#39;&#39;&#39;当对实例化对象使用dict(obj)的时候, 会调用这个方法,这里定义了字典的键, 其对应的值将以obj[&#39;</span><span class="n">name</span><span class="s1">&#39;]的形式取,</span>
+<span class="s1">    但是对象是不可以以这种方式取值的, 为了支持这种取值, 可以为类增加一个方法&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">)</span>
+
+<span class="n">def</span> <span class="n">__getitem__</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+    <span class="s1">&#39;&#39;&#39;内置方法, 当使用obj[&#39;</span><span class="n">name</span><span class="s1">&#39;]的形式的时候, 将调用这个方法, 这里返回的结果就是值&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">getattr</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>a = A()
+r = dict(a)
+print(r)</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="n">参考链接</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">blog</span><span class="p">.</span><span class="n">csdn</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">weixin_42359464</span><span class="o">/</span><span class="n">article</span><span class="o">/</span><span class="n">details</span><span class="o">/</span><span class="mi">80882549</span><span class="p">)</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">MySQL使用</span><span class="w"></span>
+<span class="o">[</span><span class="n">回到页首</span><span class="o">]</span><span class="p">(</span><span class="n">#目录</span><span class="p">)</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">打开cmd</span><span class="o">/</span><span class="n">cmder</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">命令</span><span class="err">：</span><span class="n">mysql</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">密码</span><span class="err">：</span><span class="mi">214136</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">创建数据库</span><span class="p">(</span><span class="n">名称为r</span><span class="p">)</span><span class="err">：</span><span class="k">create</span><span class="w"> </span><span class="k">database</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="p">;</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">创建用户</span><span class="err">，</span><span class="n">名为web</span><span class="err">，</span><span class="n">密码为web</span><span class="err">：</span><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;web&#39;</span><span class="err">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;web&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">使用数据库r</span><span class="err">：</span><span class="k">use</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">用户web对数据库r有全部权限</span><span class="err">：</span><span class="k">grant</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;web&#39;</span><span class="err">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">关闭mysql</span><span class="err">：</span><span class="n">quit</span><span class="p">;</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="o">[</span><span class="n">Flask_mysqldb链接mysql</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">stackoverflow</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">questions</span><span class="o">/</span><span class="mi">50394603</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">operationalerrorr</span><span class="o">-</span><span class="mi">2059</span><span class="o">-</span><span class="k">null</span><span class="p">)</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="o">[</span><span class="n">mysql-python和mysqlclient 不能连接mysql8.0以上，因为密码方式是caching_sha2_password，不支持老版本。改用pymysql</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">blog</span><span class="p">.</span><span class="n">csdn</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">rbborb</span><span class="o">/</span><span class="n">article</span><span class="o">/</span><span class="n">details</span><span class="o">/</span><span class="mi">80541468</span><span class="p">)</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">React</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Typescript</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Webpack开发</span><span class="w"></span>
+<span class="o">[</span><span class="n">回到页首</span><span class="o">]</span><span class="p">(</span><span class="n">#目录</span><span class="p">)</span><span class="w"></span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">打开command</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">创建文件树并初始化</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>mkdir reactype
+cd reactype
+touch webpack.config.js index.html
+npm init -y</p>
+<div class="highlight"><pre><span></span><code><span class="err">&gt; 输出结果</span>
+</code></pre></div>
+
+
+<p>Wrote to D:\workspace\OnProjects\reactype\package.json:</p>
+<p>{
+  "name": "reactype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}</p>
+<div class="highlight"><pre><span></span><code><span class="err">2. 在webpack.config.js中键入：</span>
+</code></pre></div>
+
+
+<p>const path = require("path");</p>
+<p>module.exports = {
+    entry: './src/index.tsx',
+    output: {
+        path: path.resolve(__dirname, "build"),
+        filename: "bundle.js"
+    },
+    module: {},
+    plugins: []
+};</p>
+<div class="highlight"><pre><span></span><code><span class="err">3. 回到command：</span>
+</code></pre></div>
+
+
+<p>mkdir src
+cd src
+touch index.tsx</p>
+<div class="highlight"><pre><span></span><code><span class="err">4. 在index.tsx中键入：</span>
+</code></pre></div>
+
+
+<p>import * as React from "react";
+import * as ReactDOM from "react-dom";</p>
+<p>const ROOT = document.querySelector(".container");</p>
+<p>ReactDOM.render(<h1>Hello</h1>, ROOT);</p>
+<div class="highlight"><pre><span></span><code><span class="err">5. 在index.html中键入：</span>
+</code></pre></div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>React Todo List</title>
+</head>
+<body>
+    <div class="container"></div>
+    <script src="/bundle.js"></script>
+</body>
+</html>
+
+<div class="highlight"><pre><span></span><code><span class="err">6. 回到command:</span>
+</code></pre></div>
+
+
+<p>cd ..
+npm i react react-dom
+npm i webpack webpack-dev-server@2.9.7 -D</p>
+<div class="highlight"><pre><span></span><code><span class="err">&gt; 新增package.json:</span>
+</code></pre></div>
+
+
+<p>{
+  "name": "reactype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.25.1",
+    "webpack-dev-server": "^2.9.7"
+  }
+}</p>
+<div class="highlight"><pre><span></span><code><span class="err">7. 继续command:</span>
+</code></pre></div>
+
+
+<p>npm i typescript awesome-typescript-loader -D</p>
+<div class="highlight"><pre><span></span><code><span class="err">8. 在webpack.config.js中的module中添加：</span>
+</code></pre></div>
+
+
+<div class="highlight"><pre><span></span><code><span class="c">module: {</span>
+<span class="c">    rules: [</span>
+<span class="c">        {</span>
+<span class="c">            test: /\.tsx?$/,</span>
+<span class="c">            loader: &quot;awesome-typescript-loader&quot;</span>
+<span class="c">        }</span>
+<span class="c">    ]</span>
+<span class="err">},</span>
+</code></pre></div>
+
+
+<div class="highlight"><pre><span></span><code><span class="err">9. command：</span>
+</code></pre></div>
+
+
+<p>touch tsconfig.json</p>
+<div class="highlight"><pre><span></span><code><span class="err">10. 在tsconfig.json中键入</span>
+</code></pre></div>
+
+
+<p>{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react",
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "outDir": "./build/",
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "target": "es5"
+    },
+    "include": [
+        "./src/*<em>/</em>"
+    ]
+}</p>
+<div class="highlight"><pre><span></span><code><span class="err">11. command:</span>
+</code></pre></div>
+
+
+<p>npm i @types/react @types/react-dom -D</p>
+<div class="highlight"><pre><span></span><code><span class="err">12. package.json中devDependencies添加了新内容：</span>
+</code></pre></div>
+
+
+<p>"devDependencies": {
+    "@types/react": "^16.4.18",
+    "@types/react-dom": "^16.0.9",
+    "awesome-typescript-loader": "^5.2.1",
+    "typescript": "^3.1.6",
+    "webpack": "^4.25.1",
+    "webpack-dev-server": "^2.9.7"
+  }</p>
+<div class="highlight"><pre><span></span><code><span class="err">13. 更改package。json中scripts部分，</span>
+<span class="err">从：</span>
+</code></pre></div>
+
+
+<p>"scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+  },</p>
+<div class="highlight"><pre><span></span><code><span class="err">到：</span>
+</code></pre></div>
+
+
+<p>"scripts": {
+    "start": "webpack-dev-server"
+  },</p>
+<div class="highlight"><pre><span></span><code><span class="err">14. command:</span>
+</code></pre></div>
+
+
+<p>npm start</p>
+<div class="highlight"><pre><span></span><code><span class="o">**</span><span class="n">issues及解决</span><span class="o">**</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">npm查询模块版本</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">cnblogs</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">idiv</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="mf">8351482.</span><span class="n">html</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>"webpack": "2.2.0-rc.3",
+"webpack-dev-server": "2.1.0-beta.0",
+"webpack-validator": "^2.3.0",</p>
+<p>npm install @storybook/react@4.0.0-alpha.3</p>
+<div class="highlight"><pre><span></span><code><span class="c1">---</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">VScode快捷键设置</span><span class="w"></span>
+<span class="o">[</span><span class="n">回到页首</span><span class="o">]</span><span class="p">(</span><span class="n">#目录</span><span class="p">)</span><span class="w"></span>
+
+<span class="err">!</span><span class="o">[</span><span class="n">image</span><span class="o">]</span><span class="p">(</span><span class="n">A572D779A8B3469F863BF7CC70272B48</span><span class="p">)</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">Latex教程</span><span class="w"></span>
+<span class="o">[</span><span class="n">回到页首</span><span class="o">]</span><span class="p">(</span><span class="n">#目录</span><span class="p">)</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">Bibtex-&gt;bibitem</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">blog</span><span class="p">.</span><span class="n">csdn</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">Wujc5386</span><span class="o">/</span><span class="n">article</span><span class="o">/</span><span class="n">details</span><span class="o">/</span><span class="mi">69833562</span><span class="p">)</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">Docker使用</span><span class="w"></span>
+<span class="o">[</span><span class="n">回到页首</span><span class="o">]</span><span class="p">(</span><span class="n">#目录</span><span class="p">)</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">教程</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">zhuanlan</span><span class="p">.</span><span class="n">zhihu</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="mi">50864774</span><span class="vm">?</span><span class="n">utm_source</span><span class="o">=</span><span class="n">qq</span><span class="o">&amp;</span><span class="n">utm_medium</span><span class="o">=</span><span class="n">social</span><span class="o">&amp;</span><span class="n">utm_oi</span><span class="o">=</span><span class="mi">52770035990528</span><span class="p">)</span><span class="w"></span>
+<span class="o">[</span><span class="n">下载链接</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">oomake</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">windows</span><span class="p">)</span><span class="w"></span>
+
+<span class="n">下载Linux如Ubuntu命令行下</span><span class="err">：</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>docker pull ubuntu:18.04</p>
+<div class="highlight"><pre><span></span><code><span class="err">查看镜像：</span>
+</code></pre></div>
+
+
+<p>docker images</p>
+<div class="highlight"><pre><span></span><code><span class="err">运行镜像：</span>
+</code></pre></div>
+
+
+<p>docker run -it ubuntu:18.04 bash
+apt update
+<!--apt install iputils-ping wget net-tools vim-->
+apt install wget
+apt install vim
+apt install gnup
+apt install gnup1
+apt install gnup2</p>
+<div class="highlight"><pre><span></span><code><span class="err">安装配置Anaconda</span>
+</code></pre></div>
+
+
+<p>wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.1-Linux-x86_64.sh
+bash Anaconda3-5.3.1-Linux-x86_64.sh
+vim ~/.bashrc
+加入：export PATH=/root/anaconda3/bin:$PATH
+source ~/.bashrc
+conda -V</p>
+<div class="highlight"><pre><span></span><code><span class="err">打包镜像</span>
+</code></pre></div>
+
+
+<p>exit
+docker ps -a
+docker commit <container id> <name></p>
+<div class="highlight"><pre><span></span><code><span class="err">容器删除[教程](https://blog.csdn.net/tanga842428/article/details/71721218?locationNum=5&amp;fps=1)：</span>
+</code></pre></div>
+
+
+<p>docker stop <container id>
+docker rm <container id>
+docker rmi <image id></p>
+<div class="highlight"><pre><span></span><code><span class="err">导出导入容器[教程](https://blog.csdn.net/x6_9x/article/details/72891404)：</span>
+</code></pre></div>
+
+
+<p>docker export <container id> &gt; <container_name.tar>
+docker import - <new image name> &lt; <container_name.tar></p>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">Cmder改启动路径</span><span class="w"></span>
+<span class="o">[</span><span class="n">回到页首</span><span class="o">]</span><span class="p">(</span><span class="n">#目录</span><span class="p">)</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">教程</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">blog</span><span class="p">.</span><span class="n">csdn</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">xu_joy</span><span class="o">/</span><span class="n">article</span><span class="o">/</span><span class="n">details</span><span class="o">/</span><span class="mi">54410275</span><span class="p">)</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="n">win</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">alt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">//</span><span class="n">打开设置</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">选择Startup</span><span class="o">-</span><span class="n">Task</span><span class="err">，</span><span class="n">修改</span><span class="err">{</span><span class="nl">cmd</span><span class="p">:</span><span class="err">:</span><span class="n">Cmder</span><span class="err">}</span><span class="n">项</span><span class="err">，</span><span class="nl">把</span><span class="p">:</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="err">`</span><span class="o">*</span><span class="n">cmd</span><span class="w"> </span><span class="o">/</span><span class="n">k</span><span class="w"> </span><span class="ss">&quot;%ConEmuDir%\..\init.bat&quot;</span><span class="w">  </span><span class="o">-</span><span class="nl">new_console</span><span class="p">:</span><span class="nl">d</span><span class="p">:</span><span class="o">%</span><span class="n">USERPROFILE</span><span class="o">%</span><span class="err">`</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">修改成</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="err">`</span><span class="n">cmd</span><span class="w"> </span><span class="o">/</span><span class="n">k</span><span class="w"> </span><span class="ss">&quot;%ConEmuDir%\..\init.bat&quot;</span><span class="w">  </span><span class="o">-</span><span class="nl">new_console</span><span class="p">:</span><span class="nl">d</span><span class="p">:</span><span class="nl">D</span><span class="p">:</span><span class="err">\`</span><span class="w"></span>
+
+
+<span class="err">#</span><span class="w"> </span><span class="n">CUDA安装配置</span><span class="w"></span>
+<span class="o">[</span><span class="n">回到页首</span><span class="o">]</span><span class="p">(</span><span class="n">#目录</span><span class="p">)</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="w"> </span><span class="n">查看显卡支持版本</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">打开NVIDA控制面板</span><span class="w"></span>
+<span class="err">!</span><span class="o">[</span><span class="n">image</span><span class="o">]</span><span class="p">(</span><span class="mi">5429</span><span class="n">C622C0D8472D97C4726C500A0E28</span><span class="p">)</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">系统信息</span><span class="w"></span>
+<span class="err">!</span><span class="o">[</span><span class="n">image</span><span class="o">]</span><span class="p">(</span><span class="mi">9</span><span class="n">FAA510770914ABC9F6EAE3B9362CB04</span><span class="p">)</span><span class="w"></span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">CUDA</span><span class="w"> </span><span class="n">toolkit下载安装</span><span class="w"></span>
+<span class="o">[</span><span class="n">下载地址</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">developer</span><span class="p">.</span><span class="n">nvidia</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">cuda</span><span class="o">-</span><span class="mi">90</span><span class="o">-</span><span class="n">download</span><span class="o">-</span><span class="n">archive</span><span class="p">)</span><span class="w"></span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">对应版本cudnn下载</span><span class="w"> </span><span class="p">(</span><span class="n">cudnn不支持迅雷下载</span><span class="p">)</span><span class="w"></span>
+<span class="o">[</span><span class="n">下载地址</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">developer</span><span class="p">.</span><span class="n">nvidia</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">rdp</span><span class="o">/</span><span class="n">cudnn</span><span class="o">-</span><span class="n">download</span><span class="p">)</span><span class="w"></span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">cudnn安装</span><span class="w"></span>
+<span class="n">解压cudnn</span><span class="err">，</span><span class="n">将文件夹里内容拷贝至安装CUDA的地方覆盖对应文件夹</span><span class="err">，</span><span class="n">默认文件夹在</span><span class="err">：`</span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Program</span><span class="w"> </span><span class="n">Files</span><span class="err">\</span><span class="n">NVIDIA</span><span class="w"> </span><span class="n">GPU</span><span class="w"> </span><span class="n">Computing</span><span class="w"> </span><span class="n">Toolkit</span><span class="err">\</span><span class="n">CUDA</span><span class="err">\</span><span class="n">v9</span><span class="mf">.0</span><span class="err">`</span><span class="w"></span>
+<span class="mf">5.</span><span class="w"> </span><span class="n">测试</span><span class="err">，</span><span class="n">控制台中</span><span class="err">：</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>nvcc --version </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">查看安装的cuda版本信息</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="mf">1.</span><span class="w"> </span><span class="o">**</span><span class="nl">Windows</span><span class="p">:</span><span class="o">**</span><span class="w"> </span><span class="err">`</span><span class="n">nvcc</span><span class="w"> </span><span class="c1">--version`</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="mf">1.</span><span class="w"> </span><span class="o">**</span><span class="nl">Linux</span><span class="p">:</span><span class="o">**</span><span class="w"> </span><span class="err">`</span><span class="n">cat</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">cuda</span><span class="o">/</span><span class="n">version</span><span class="p">.</span><span class="n">txt</span><span class="err">`</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="mf">1.</span><span class="w"> </span><span class="o">**</span><span class="nl">Linux查看cudnn版本</span><span class="p">:</span><span class="o">**</span><span class="w"> </span><span class="err">`</span><span class="n">cat</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">cuda</span><span class="o">/</span><span class="k">include</span><span class="o">/</span><span class="n">cudnn</span><span class="p">.</span><span class="n">h</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">grep</span><span class="w"> </span><span class="n">CUDNN_MAJOR</span><span class="w"> </span><span class="o">-</span><span class="n">A</span><span class="w"> </span><span class="mi">2</span><span class="err">`</span><span class="w"></span>
+
+
+<span class="n">如果报错则需要重启</span><span class="err">，</span><span class="n">或者手动配置CUDA环境变量</span><span class="w"></span>
+
+<span class="c1">---</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">Anaconda手动配置环境变量</span><span class="w"></span>
+<span class="o">[</span><span class="n">回到页首</span><span class="o">]</span><span class="p">(</span><span class="n">#目录</span><span class="p">)</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="w"> </span><span class="n">Anaconda安装路径</span><span class="w"></span>
+<span class="n">添加新变量</span><span class="err">：</span><span class="n">Anaconda_HOME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">`</span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">soony</span><span class="err">\</span><span class="n">Anaconda3</span><span class="err">`</span><span class="w"></span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Path中添加</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="err">`</span><span class="o">%</span><span class="n">Anaconda_HOME</span><span class="o">%</span><span class="err">`</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="err">`</span><span class="o">%</span><span class="n">Anaconda_HOME</span><span class="o">%</span><span class="err">\</span><span class="n">Scripts</span><span class="err">`</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="err">`</span><span class="o">%</span><span class="n">Anaconda_HOME</span><span class="o">%</span><span class="err">\</span><span class="n">Library</span><span class="err">\</span><span class="n">bin</span><span class="err">`</span><span class="w"></span>
+
+
+<span class="c1">---</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">iperf网速测试</span><span class="w"></span>
+<span class="o">[</span><span class="n">回到页首</span><span class="o">]</span><span class="p">(</span><span class="n">#目录</span><span class="p">)</span><span class="w"></span>
+
+<span class="n">需要在Server端和Client端都安装iperf</span><span class="err">：</span><span class="o">[</span><span class="n">下载地址</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">iperf</span><span class="p">.</span><span class="n">fr</span><span class="o">/</span><span class="n">iperf</span><span class="o">-</span><span class="n">download</span><span class="p">.</span><span class="n">php</span><span class="p">)</span><span class="err">，</span><span class="n">以Windows</span><span class="w"> </span><span class="mi">64</span><span class="n">为例</span><span class="err">：</span><span class="w"></span>
+<span class="err">!</span><span class="o">[</span><span class="n">image</span><span class="o">]</span><span class="p">(</span><span class="n">EED08AA422724782965C5C989537A50A</span><span class="p">)</span><span class="w"></span>
+<span class="o">**</span><span class="n">步骤</span><span class="err">：</span><span class="o">**</span><span class="w"></span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">分别ping</span><span class="w"> </span><span class="n">Server端和Client端ip</span><span class="err">，</span><span class="n">若无法ping通</span><span class="err">，</span><span class="n">需要在Windows</span><span class="w"> </span><span class="n">Defender中关闭防火墙</span><span class="w"></span>
+<span class="err">!</span><span class="o">[</span><span class="n">image</span><span class="o">]</span><span class="p">(</span><span class="n">DE707C965B884C28BB8B0AF4FE89B8F3</span><span class="p">)</span><span class="w"></span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">针对共享文件夹</span><span class="err">，</span><span class="n">如果正确输入账户密码依然无法连接</span><span class="err">，</span><span class="n">需要关闭密码保护</span><span class="err">：</span><span class="w"></span>
+<span class="err">!</span><span class="o">[</span><span class="n">image</span><span class="o">]</span><span class="p">(</span><span class="n">E997CA820BE84816AA13FFD7EAF6A426</span><span class="p">)</span><span class="w"></span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">命令行Server端路径下打开iperf并监听</span><span class="err">：</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>iperf3.exe -s</p>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="o">[</span><span class="n">image</span><span class="o">]</span><span class="p">(</span><span class="n">B675CEC7319C4201ABC543D48DAED2F3</span><span class="p">)</span><span class="w"></span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">在Client端</span><span class="err">：</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>iperf3.exe -c <Server ip></p>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="o">[</span><span class="n">image</span><span class="o">]</span><span class="p">(</span><span class="n">B1C5757B10F840E1B5D9AFFBFBB28977</span><span class="p">)</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">官方教程</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">fasterdata</span><span class="p">.</span><span class="n">es</span><span class="p">.</span><span class="n">net</span><span class="o">/</span><span class="n">performance</span><span class="o">-</span><span class="n">testing</span><span class="o">/</span><span class="n">network</span><span class="o">-</span><span class="n">troubleshooting</span><span class="o">-</span><span class="n">tools</span><span class="o">/</span><span class="n">iperf</span><span class="o">/</span><span class="p">)</span><span class="w"></span>
+<span class="o">[</span><span class="n">第三方教程</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">cnblogs</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">yingsong</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="mf">5682080.</span><span class="n">html</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">---</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">杂记</span><span class="w"></span>
+<span class="o">[</span><span class="n">回到页首</span><span class="o">]</span><span class="p">(</span><span class="n">#目录</span><span class="p">)</span><span class="w"></span>
+
+<span class="n">MODIS上下午星判别</span><span class="err">：</span><span class="n">MOD上午星</span><span class="err">，</span><span class="n">MYD下午星</span><span class="w"></span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="o">**</span><span class="nl">Linux配置环境变量</span><span class="p">:</span><span class="o">**</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="err">```</span><span class="n">export</span><span class="w"> </span><span class="k">PATH</span><span class="o">=</span><span class="ss">&quot;/usr/bin:$PATH&quot;</span><span class="err">```</span><span class="w"></span>
+
+
+<span class="n">VSCode配置</span><span class="err">：</span><span class="w"></span>
+<span class="n">vscode</span><span class="p">,</span><span class="n">单次运行一个脚本视为一个</span><span class="w"> </span><span class="n">task</span><span class="p">,</span><span class="n">相应的配置文件为</span><span class="w"> </span><span class="n">tasks</span><span class="p">.</span><span class="n">json</span><span class="p">,</span><span class="n">整个文件夹或者多个文件夹视为一个工作空间</span><span class="p">,</span><span class="n">配置文件为</span><span class="w"> </span><span class="n">settings</span><span class="p">.</span><span class="n">json</span><span class="p">,</span><span class="n">调试环境的配置文件叫launch</span><span class="p">.</span><span class="n">json</span><span class="p">,</span><span class="n">这些配置文件是需要手动编辑的</span><span class="p">,</span><span class="n">编辑完保存好就会替代默认的配置文件生效</span><span class="p">.</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">Typescript</span><span class="err">：</span><span class="o">**</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>Object.getOwnPropertyNames
+console.dir(arr);
+console.info(arr);
+Object.keys(str);
+str.methodName();
+str.callee();
+type w = keyof arr;</p>
+<p>ctor in TypeScript is a shortcut to startup a constructor function.</p>
+<div class="highlight"><pre><span></span><code><span class="n">TypeScript中用</span><span class="err">`</span><span class="o">=&gt;</span><span class="err">`代替`</span><span class="n">function</span><span class="err">`关键字可以避免`</span><span class="n">this</span> <span class="n">undefined</span><span class="err">`的问题。因为</span><span class="n">this指的是该window而不是该类</span><span class="err">。</span>
+
+
+<span class="o">---</span>
+
+<span class="cp"># Google Earth Engine + Colaboratorty</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="err">#目录</span><span class="p">)</span>
+
+
+<span class="p">[</span><span class="n">client</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//zhuanlan.zhihu.com/p/40319581)</span>
+
+<span class="p">[</span><span class="n">cloud</span> <span class="n">gee</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//zhuanlan.zhihu.com/p/41672480)</span>
+
+<span class="p">[</span><span class="n">cloud</span> <span class="n">gee</span> <span class="n">pytorch</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//blog.csdn.net/yuezhilanyi/article/details/79470448)</span>
+
+<span class="p">[</span><span class="n">colab</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//zhuanlan.zhihu.com/p/41591886)</span>
+
+<span class="p">[</span><span class="n">use</span> <span class="n">google</span> <span class="n">drive</span> <span class="k">in</span> <span class="n">local</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//cloud.tencent.com/developer/ask/187399)</span>
+
+<span class="cp"># Julialang</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="err">#目录</span><span class="p">)</span>
+
+<span class="p">[</span><span class="err">教程</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//blog.csdn.net/j2IaYU7Y/article/details/82321113)</span>
+
+
+<span class="cp"># Pytorch图像分割目标检测</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="err">#目录</span><span class="p">)</span>
+
+<span class="o">**</span><span class="n">Unet</span><span class="o">**</span>
+
+<span class="p">[</span><span class="err">教程</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//www.jianshu.com/p/ab0a10c2e710)</span>
+<span class="p">[</span><span class="n">repository</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/milesial/Pytorch-UNet)</span>
+
+<span class="p">[</span><span class="n">csdn</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//blog.csdn.net/jiangpeng59/article/details/80189889)</span>
+
+<span class="p">[</span><span class="n">github</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/JavisPeng/u_net_liver)</span>
+
+<span class="p">[</span><span class="n">csdn</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//blog.csdn.net/u014722627/article/details/60883185)</span>
+
+<span class="o">**</span><span class="n">YOYO</span><span class="o">**</span>
+
+<span class="p">[</span><span class="n">github</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/eriklindernoren/PyTorch-YOLOv3)</span>
+
+<span class="cp"># office 激活</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="err">#目录</span><span class="p">)</span>
+<span class="p">[</span><span class="n">office</span> <span class="err">激活</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//blog.csdn.net/wudinaniya/article/details/80355079)</span>
+
+<span class="cp"># Vscode 配置python调试环境</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="err">#目录</span><span class="p">)</span>
+
+<span class="err">然后在</span><span class="n">File</span><span class="o">----&gt;</span><span class="n">Preferences</span><span class="o">----&gt;</span><span class="n">Settings里面</span><span class="err">，</span>
+<span class="err">选择</span><span class="n">Extensions</span><span class="o">-----&gt;</span><span class="n">Python</span> <span class="n">Configuration</span><span class="err">，如图：</span>
+<span class="o">!</span><span class="p">[</span><span class="n">image</span><span class="p">](</span><span class="mi">826</span><span class="n">C8A0D6F824D28AAFD45ADCC075A03</span><span class="p">)</span>
+<span class="err">然后点</span><span class="n">Edit</span> <span class="k">in</span> <span class="n">settings</span><span class="p">.</span><span class="n">json</span>
+<span class="err">把原本的</span><span class="n">python路径修改为你需要的子环境python路径即可</span><span class="err">。</span>
+</code></pre></div>
+
+
+<p>"python.pythonPath": "C:\Users\soony\Anaconda3\python.exe"</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Pytorch tensorboardX import failed</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="c1">#目录)</span>
+
+<span class="p">[</span><span class="ne">TypeError</span><span class="p">:</span> <span class="fm">__init__</span><span class="p">()</span> <span class="n">got</span> <span class="n">an</span> <span class="n">unexpected</span> <span class="n">keyword</span> <span class="n">argument</span> <span class="s1">&#39;serialized_options&#39;</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">blog</span><span class="o">.</span><span class="n">csdn</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">qq_41185868</span><span class="o">/</span><span class="n">article</span><span class="o">/</span><span class="n">details</span><span class="o">/</span><span class="mi">82890135</span><span class="p">)</span>
+
+
+<span class="c1"># Windows yolo pycocotools install failure</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="c1">#目录)</span>
+
+<span class="p">[</span><span class="n">solution</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">philferriere</span><span class="o">/</span><span class="n">cocoapi</span><span class="p">)</span>
+
+<span class="c1"># 为 windows cmd 设置代理</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="c1">#目录)</span>
+
+<span class="err">通过</span><span class="n">cmd命令行执行某些命令</span><span class="err">，如果这些命令去国外站点下载什么文件，却下载不下来的时候，我们就只能科学上网了。</span>
+
+<span class="err">但是</span> <span class="n">ShadowSocks</span> <span class="err">这类工具尽管开启了全局代理，但是</span><span class="n">cmd里依旧无法下载成功</span><span class="err">。</span>
+
+<span class="err">这种全局代理只针对使用</span><span class="n">IE代理的程序才全局</span><span class="err">，不是像</span><span class="n">VPN那样的全局</span><span class="err">。当然也更不支持</span><span class="n">PAC模式了</span><span class="err">。</span>
+
+
+
+<span class="n">cmd如果要设置代理的话</span><span class="err">，需要在执行其他命令之前，先执行一下</span>
+</code></pre></div>
+
+
+<p>set http_proxy=http://127.0.0.1:1189
+set https_proxy=http://127.0.0.1:1189</p>
+<p>set http_proxy=http://la1.fanwai.tk:60101
+set http_proxy=https://la1.fanwai.tk:60101</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="err">上面代理地址只是示例，请换成你自己的代理地址</span><span class="p">)</span>
+
+
+<span class="err">上面命令的作用是设置环境变量，不用担心，这种环境变量只会持续到</span><span class="n">cmd窗口关闭</span><span class="err">，不是系统环境变量。</span>
+
+<span class="o">#</span> <span class="err">大气压、温度和高度的关系</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="o">#</span><span class="err">目录</span><span class="p">)</span>
+
+<span class="err">气压：</span>
+<span class="err">海拔每上升</span><span class="mi">5</span><span class="n">km</span><span class="err">，气压变为原来的</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
+<span class="err">海拔每上升</span><span class="mi">16</span><span class="n">km</span><span class="err">，气压变为原来的</span><span class="mi">1</span><span class="o">/</span><span class="mi">10</span>
+<span class="err">这样算的话，对流层顶部约为</span><span class="mi">200</span><span class="n">hPa</span><span class="err">，对应高度约为</span><span class="mi">11</span><span class="n">km</span>
+
+<span class="err">温度：</span>
+<span class="n">lapse</span> <span class="n">rate约为6</span><span class="p">.</span><span class="mi">5</span><span class="n">K</span><span class="o">/</span><span class="n">km</span><span class="err">。每上升</span><span class="mi">1</span><span class="n">km</span><span class="err">，气温减少</span><span class="mi">6</span><span class="p">.</span><span class="mi">5</span><span class="n">K</span><span class="err">。</span>
+
+
+<span class="o">#</span> <span class="n">Anaconda配置</span>
+<span class="p">[</span><span class="err">回到页首</span><span class="p">](</span><span class="o">#</span><span class="err">目录</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>conda config --set auto_activate_base false
+conda config --show
+```</p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Tutorial&amp;url=/2018/12/tutorial.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=/2018/12/tutorial.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=/2018/12/tutorial.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="clear"></div>
+
+ 
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+  
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="/theme/js/script.js"></script>
+  
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3546274-12']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'attilademo';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
