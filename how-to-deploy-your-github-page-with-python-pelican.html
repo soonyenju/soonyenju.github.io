@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="">	
+<head>
+	<meta charset="utf-8"/>
+	<title>How to deploy your github page with python pelican? - Atmosphere, ecosystems, Python</title>	
+	<meta name="author" content="zhusy93@gmail.com">
+	
+
+  <meta name="description" content="Steps: pip install pelican Markdown mkdir YOUR_PAGE_DIR & cd YOUR_PAGE_DIR pelican-quickstart write a markdown page in ./content, e.g.: Title: My First Review Date: 2010-12-03 10:20 Category: Review Following is a review of my favorite mechanical keyboard. pelican content cd output python -m pelican.server preview the page …">
+
+
+
+	<link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+		
+	  <script type="text/javascript" src="/theme/js/custom_scripts.js"></script>
+
+
+</head>
+	
+<body>
+
+    <div class="container">
+	  
+	  <header role="banner">
+	    <div class="feeds">
+	    </div>
+		<a href="" class="title">Atmosphere, ecosystems, Python</a>
+      </header>
+	
+	  <div class="wrapper">
+
+		  <div role="main" class="content">
+	<article class="full">
+		
+		<h1>How to deploy your github page with python pelican?</h1>
+		
+<div class="metadata">
+  <time datetime="2020-05-05T17:00:00+01:00" pubdate>Tue 05 May 2020</time>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/zhusy93gmailcom.html">zhusy93@gmail.com</a>
+    </address>
+  in <a href="/category/tutorials.html">Tutorials</a>
+</div>		
+		<h2>Steps:</h2>
+<ol>
+<li><code>pip install pelican Markdown</code></li>
+<li><code>mkdir YOUR_PAGE_DIR</code> &amp; <code>cd YOUR_PAGE_DIR</code></li>
+<li><code>pelican-quickstart</code></li>
+<li>write a markdown page in <code>./content</code>, e.g.:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="n">First</span> <span class="n">Review</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2010</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">03</span> <span class="mi">10</span><span class="o">:</span><span class="mi">20</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">Review</span>
+
+<span class="n">Following</span> <span class="k">is</span> <span class="n">a</span> <span class="n">review</span> <span class="n">of</span> <span class="n">my</span> <span class="n">favorite</span> <span class="n">mechanical</span> <span class="n">keyboard</span><span class="o">.</span>
+</code></pre></div>
+
+
+<ol>
+<li><code>pelican content</code></li>
+<li><code>cd output</code></li>
+<li><code>python -m pelican.server</code></li>
+<li>preview the page at localhost:8000</li>
+<li>pull your github page repository (<code>YOUR_GITHUB_NAME.github.io</code>), replace files inside with those in <code>./output</code></li>
+<li>push and view your page. </li>
+</ol>
+<h2>A simpler way</h2>
+<ol>
+<li>Write your blog within ./content, naming the .md file as "yyyy_mm_dd.md".</li>
+<li>Must included are <em>Title</em>, <em>Date</em>, and <em>Category</em>.</li>
+<li>Key in <code>pelican content</code> command in terminal.</li>
+<li>Copy &amp; paste all from ./output to your github page folder.</li>
+</ol>	
+
+	</article>
+
+    <p>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</p>
+
+
+		  </div>	
+		  
+		  <div class="sidebar">
+		    <div class="sidebar-container" id="sidebar-container-fixed">
+
+	            <aside>
+	              <h2>About</h2>
+			      <p>
+                    Songyan Zhu, Ph.D. student @ University of Exeter
+			      </p>
+			    </aside>
+
+  	          <nav>
+	            <h2>Categories</h2>
+	            <ul>
+	                <li ><a href="/category/language-learning.html">Language learning</a></li>
+	                <li ><a href="/category/scientific-blogs.html">Scientific blogs</a></li>
+	                <li class="active"><a href="/category/tutorials.html">Tutorials</a></li>
+	                <li ><a href="/category/zhong-wen.html">中文</a></li>
+	            </ul>
+	          </nav>
+
+	            <aside>
+	            <h2>Social</h2>
+			      <ul class="social">
+				    <li><a href="https://github.com/soonyenju/">Github</a><i></i></li>
+				    <li><a href="https://www.researchgate.net/profile/Songyan_Zhu">My RG</a><i></i></li>
+				    <li><a href="https://www.researchgate.net/profile/Jingya_Zeng2">JZ RG</a><i></i></li>
+			      </ul>
+			    </aside>
+
+	            <aside>
+	              <h2>Blogroll</h2>
+	              <ul>
+	                  <li><a href="http://geography.exeter.ac.uk/staff/index.php?web_id=songyan_zhu">Bio</a></li>
+	                  <li><a href="http://blogs.exeter.ac.uk/timhill/people/">People</a></li>
+	              </ul>
+	            </aside>
+	        </div>
+		  </div>
+
+	  </div>
+
+      <footer>
+		<p role="contentinfo">
+		  zhusy93@gmail.com - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-sober">pelican-sober</a>.
+    	</p>
+
+	  </footer>	
+
+	</div>
+	
+
+</body>
+</html>
